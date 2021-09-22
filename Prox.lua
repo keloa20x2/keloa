@@ -1015,6 +1015,225 @@ else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("⌔ عذرا هذا الامر لكشف الروبوت وليس لك .")..'&show_alert=true')
 end 
 end
+if DataText and DataText:match(tonumber(data.sender_user_id_)..':SetMem:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetMem:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:sadd(Prox..'Rio:VipMem:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم رفعه في قائمة المميزين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetCleaner:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetCleaner:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:sadd(Prox..'Rio:Cleaner:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم رفعه في قائمة المنظفين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetAdmin:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetAdmin:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:sadd(Prox..'Rio:Admins:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم رفعه في قائمة الادمنيه')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetManager:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetManager:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:sadd(Prox..'Rio:Managers:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم رفعه في قائمة المدراء')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetConstructor:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetConstructor:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:sadd(Prox..'Rio:Constructor:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم رفعه في قائمة المنشئين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetBasicConstructor:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetBasicConstructor:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:sadd(Prox..'Rio:BasicConstructor:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم رفعه في قائمة المنشئين الاساسيين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetAbsConstructor:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetAbsConstructor:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:sadd(Prox..'Rio:AbsConstructor:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم رفعه في قائمة المالكين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetSudoBot:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetSudoBot:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:sadd(Prox..'Rio:SudoBot:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم رفعه في قائمة المطورين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':SetSecondSudo:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetSecondSudo:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:sadd(Prox..'Rio:SecondSudo:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم رفعه في قائمة المطورين الثانويين')
+end,nil)
+end
+if DataText and DataText:match(tonumber(data.sender_user_id_)..':RemMem:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemMem:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:VipMem:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تنزيله من قائمة المميزين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemCleaner:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemCleaner:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:Cleaner:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تنزيله من قائمة المنظفين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemAdmin:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemAdmin:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:Admins:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تنزيله من قائمة الادمنيه')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemManager:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemManager:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:Managers:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تنزيله من قائمة المدراء')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemConstructor:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemConstructor:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:Constructor:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تنزيله من قائمة المنشئين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemBasicConstructor:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemBasicConstructor:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:BasicConstructor:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تنزيله من قائمة المنشئين الاساسيين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemAbsConstructor:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemAbsConstructor:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:AbsConstructor:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تنزيله من قائمة المالكين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemSudoBot:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemSudoBot:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:SudoBot:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تنزيله من قائمة المطورين')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':RemSecondSudo:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemSecondSudo:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:SecondSudo:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تنزيله من قائمة المطورين الثانويين')
+end,nil)
+end
+if DataText and DataText:match(tonumber(data.sender_user_id_)..':Mute:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':Mute:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+if RankChecking(dp.id_, data.chat_id_) then
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙لا تستطيع كتم ↫ '..IdRank(dp.id_, data.chat_id_))
+else
+DevRio:sadd(Prox..'Rio:Muted:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم كتمه من المجموعه')
+end
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':UnMute:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':UnMute:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:Muted:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم الغاء كتمه من المجموعه')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':Ban:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':Ban:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+if RankChecking(dp.id_, data.chat_id_) then
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙لا تستطيع حظر ↫ '..IdRank(dp.id_, data.chat_id_))
+else
+DevRio:sadd(Prox..'Rio:Ban:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم حظره من المجموعه')
+end
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':UnBan:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':UnBan:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+DevRio:srem(Prox..'Rio:Ban:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم الغاء حظره من المجموعه')
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':Tked:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':Tked:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+if RankChecking(dp.id_, data.chat_id_) then
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙لا تستطيع تقيد ↫ '..IdRank(dp.id_, data.chat_id_))
+else
+https.request("https://api.telegram.org/bot"..TokenBot.."/restrictChatMember?chat_id="..data.chat_id_.."&user_id="..dp.id_)
+DevRio:sadd(Prox..'Rio:Tkeed:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم تقيده من المجموعه')
+end
+end,nil)
+elseif DataText and DataText:match(tonumber(data.sender_user_id_)..':UnTked:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':UnTked:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+HTTPS.request("https://api.telegram.org/bot"..TokenBot.."/restrictChatMember?chat_id="..data.chat_id_.."&user_id="..dp.id_.."&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
+DevRio:srem(Prox..'Rio:Tkeed:'..data.chat_id_,dp.id_)
+EditMsg(Chat_Id2, Msg_Id2,'⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')\n⌁︙تم الغاء تقيده من المجموعه')
+end,nil)
+end
+if DataText and DataText:match(tonumber(data.sender_user_id_)..':SetRtba:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetRtba:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+if dp.first_name_ == false then
+Dev_Abs(data.chat_id_, data.id_, 1, "⌁︙الحساب محذوف", 1, "md")
+return false  
+end
+local Text = '⌁︙قم باستعمال الازرار لرفع العضو ↫ ⤈\n⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')'
+keyboard = {} 
+if Sudo(data) then
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetAbsConstructor:"..AbsId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..AbsId}},{{text="رفع مطور ثانوي",callback_data=data.sender_user_id_..":SetSecondSudo:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif SecondSudo(data) then
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetAbsConstructor:"..AbsId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif SudoBot(data) then
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetAbsConstructor:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif AbsConstructor(data) then
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif BasicConstructor(data) then
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif Constructor(data) then
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif Manager(data) then
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif Admin(data) then
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+end 
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end,nil)
+end
+if DataText and DataText:match(tonumber(data.sender_user_id_)..':RemRtba:(.*)') then
+local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemRtba:(.*)')
+tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
+if dp.first_name_ == false then
+DevRio(data.chat_id_, data.id_, 1, "⌁︙الحساب محذوف", 1, "md")
+return false  
+end
+local Text = '⌁︙قم باستعمال الازرار لتنزيل العضو ↫ ⤈\n⌁︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'ZzZlZzZ')..')'
+keyboard = {} 
+if Sudo(data) then
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemAbsConstructor:"..AbsId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..AbsId}},{{text="تنزيل مطور ثانوي",callback_data=data.sender_user_id_..":RemSecondSudo:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif SecondSudo(data) then
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemAbsConstructor:"..AbsId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif SudoBot(data) then
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemAbsConstructor:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif AbsConstructor(data) then
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif BasicConstructor(data) then
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif Constructor(data) then
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif Manager(data) then
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+elseif Admin(data) then
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId}},{{text = '⌁ Lions TeAM .',url="t.me/ZzZlZzZ"}}}
+end 
+https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end,nil)
+end
 if DataText and DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Rio = DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)')
 EditMsg(Chat_Id2, Msg_Id2, "⌔  الكلمه ↫ "..Rio.." تم حذفها") 
@@ -1759,23 +1978,23 @@ end
 end 
 --     Source Prox     --
 if ChatType == 'pv' then 
-if text == '/start' or text == '↫ رجوع ⌔' then 
+if text == '/start' or text == '↫ رجوع ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙مرحبا عزيزي المطور \n⌔︙انت المطور الاساسي هنا \n⌔︙اليك ازرار سورس كيلوا \n⌔︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙مرحبا عزيزي المطور \n⌔ ︙انت المطور الاساسي هنا \n⌔ ︙اليك ازرار سورس بروكس \n⌔ ︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ السورس ⌔','وضع اسم البوت'},
-{'↫  المطورين ⌔','↫ الاحصائيات ⌔'},
-{'↫ التفعيل والتعطيل ⌔','↫ الاذاعه ⌔'},
-{'↫ تعيين كلايش الاوامر ⌔','↫ العام ⌔','↫ ردود الخاص ⌔'},
-{'↫ المتجر ⌔','↫ الاوامر الخدميه ⌔'},
-{'↫ الاشتراك الاجباري ⌔'},
+{'↫ السورس ⌔ ','وضع اسم البوت'},
+{'↫  المطورين ⌔ ','↫ الاحصائيات ⌔ '},
+{'↫ التفعيل والتعطيل ⌔ ','↫ الاذاعه ⌔ '},
+{'↫ تعيين كلايش الاوامر ⌔ ','↫ العام ⌔ ','↫ ردود الخاص ⌔ '},
+{'↫ المتجر ⌔ ','↫ الاوامر الخدميه ⌔ '},
+{'↫ الاشتراك الاجباري ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ تعيين كلايش الاوامر ⌔' then 
+if text == '↫ تعيين كلايش الاوامر ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'تغير معلومات الترحيب'},
 {'حذف كليشة الايدي','تعيين كليشة الايدي'},
@@ -1783,119 +2002,119 @@ local key = {
 {'تعيين امر م3','تعيين امر م2','تعيين امر م1'},
 {'تعيين امر م6','تعيين امر م5','تعيين امر م4'},
 {'استعادة كلايش الاوامر'},
-{'↫ رجوع ⌔'},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ السورس ⌔' then 
+if text == '↫ السورس ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه بتحديث  سورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه بتحديث  سورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ تحديث السورس ⌔','↫ تحديث ⌔'},
-{'↫ السيرفر ⌔'},
-{'↫ مبرمج السورس ⌔','↫ قناة السورس ⌔'},
-{'↫  السورس ⌔'},
-{'↫ رجوع ⌔'},
+{'↫ تحديث السورس ⌔ ','↫ تحديث ⌔ '},
+{'↫ السيرفر ⌔ '},
+{'↫ مبرمج السورس ⌔ ','↫ قناة السورس ⌔ '},
+{'↫  السورس ⌔ '},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاحصائيات ⌔' then 
+if text == '↫ الاحصائيات ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه ب أحصائيات  سورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه ب أحصائيات  سورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫  الاحصائيات ⌔'},
-{'↫ المشتركين ⌔','↫ المجموعات ⌔'},
-{'↫ روابط المجموعات ⌔','↫ جلب نسخه احتياطيه ⌔'},
-{'↫ تنظيف المشتركين ⌔','↫ تنظيف المجموعات ⌔'},
-{'↫ نقل الاحصائيات ⌔'},
-{'↫ رجوع ⌔'},
+{'↫  الاحصائيات ⌔ '},
+{'↫ المشتركين ⌔ ','↫ المجموعات ⌔ '},
+{'↫ روابط المجموعات ⌔ ','↫ جلب نسخه احتياطيه ⌔ '},
+{'↫ تنظيف المشتركين ⌔ ','↫ تنظيف المجموعات ⌔ '},
+{'↫ نقل الاحصائيات ⌔ '},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫  المطورين ⌔' then 
+if text == '↫  المطورين ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه ب المطورين لسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه ب المطورين لسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ الاساسيين ⌔','مسح الاساسيين'},
-{'↫ الثانويين ⌔','مسح الثانويين'},
-{'↫ المطورين ⌔','مسح المطورين'},
-{'↫ تغير المطور الاساسي ⌔','↫ تغيير كليشه المطور ⌔'},
-{'↫ رجوع ⌔'},
+{'↫ الاساسيين ⌔ ','مسح الاساسيين'},
+{'↫ الثانويين ⌔ ','مسح الثانويين'},
+{'↫ المطورين ⌔ ','مسح المطورين'},
+{'↫ تغير المطور الاساسي ⌔ ','↫ تغيير كليشه المطور ⌔ '},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ التفعيل والتعطيل ⌔' then 
+if text == '↫ التفعيل والتعطيل ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ تعطيل التواصل ⌔','↫ تفعيل التواصل ⌔'},
-{'↫ تعطيل ترحيب البوت ⌔','↫ تفعيل ترحيب البوت ⌔'},
-{'↫ تعطيل المغادره ⌔','↫ تفعيل المغادره ⌔'},
-{'↫ تعطيل الاذاعه ⌔','↫ تفعيل الاذاعه ⌔'},
-{'↫ تعطيل البوت الخدمي ⌔','↫ تفعيل البوت الخدمي ⌔'},
-{'↫ رجوع ⌔'},
+{'↫ تعطيل التواصل ⌔ ','↫ تفعيل التواصل ⌔ '},
+{'↫ تعطيل ترحيب البوت ⌔ ','↫ تفعيل ترحيب البوت ⌔ '},
+{'↫ تعطيل المغادره ⌔ ','↫ تفعيل المغادره ⌔ '},
+{'↫ تعطيل الاذاعه ⌔ ','↫ تفعيل الاذاعه ⌔ '},
+{'↫ تعطيل البوت الخدمي ⌔ ','↫ تفعيل البوت الخدمي ⌔ '},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاذاعه ⌔' then 
+if text == '↫ الاذاعه ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه بالاذاعه لسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه بالاذاعه لسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ اذاعه بالتثبيت ⌔'},
-{'↫ اذاعه خاص ⌔','↫ اذاعه عام ⌔'},
-{'↫ اذاعه خاص بالتوجيه ⌔','↫ اذاعه عام بالتوجيه ⌔'},
+{'↫ اذاعه بالتثبيت ⌔ '},
+{'↫ اذاعه خاص ⌔ ','↫ اذاعه عام ⌔ '},
+{'↫ اذاعه خاص بالتوجيه ⌔ ','↫ اذاعه عام بالتوجيه ⌔ '},
 {'الغاء'},
-{'↫ رجوع ⌔'},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ العام ⌔' then 
+if text == '↫ العام ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه بالعام لسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه بالعام لسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ اضف رد عام ⌔','↫ حذف رد عام ⌔'},
-{'↫ ردود العام ⌔','↫ مسح ردود العام ⌔'},
-{'↫ قائمه العام ⌔','مسح قائمه العام'},
-{'↫ رجوع ⌔'},
+{'↫ اضف رد عام ⌔ ','↫ حذف رد عام ⌔ '},
+{'↫ ردود العام ⌔ ','↫ مسح ردود العام ⌔ '},
+{'↫ قائمه العام ⌔ ','مسح قائمه العام'},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ ردود الخاص ⌔' then 
+if text == '↫ ردود الخاص ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه بردود الخاص لسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه بردود الخاص لسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ تعيين رد الخاص ⌔','↫ حذف رد الخاص ⌔'},
-{'↫ جلب رد الخاص ⌔'},
-{'↫ رجوع ⌔'},
+{'↫ تعيين رد الخاص ⌔ ','↫ حذف رد الخاص ⌔ '},
+{'↫ جلب رد الخاص ⌔ '},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاشتراك الاجباري ⌔' then 
+if text == '↫ الاشتراك الاجباري ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫  تفعيل الاشتراك الاجباري ⌔','↫  تعطيل الاشتراك الاجباري ⌔'},
-{'↫ تعيين قناة الاشتراك ⌔',' ↫ حذف قناة الاشتراك ⌔'},
-{'↫ تغير كليشه الاشتراك ⌔','↫ حذف كليشه الاشتراك ⌔'},
-{'↫ كليشه الاشتراك ⌔','↫ قناة الاشتراك ⌔'},
-{'↫ رجوع ⌔'},
+{'↫  تفعيل الاشتراك الاجباري ⌔ ','↫  تعطيل الاشتراك الاجباري ⌔ '},
+{'↫ تعيين قناة الاشتراك ⌔ ',' ↫ حذف قناة الاشتراك ⌔ '},
+{'↫ تغير كليشه الاشتراك ⌔ ','↫ حذف كليشه الاشتراك ⌔ '},
+{'↫ كليشه الاشتراك ⌔ ','↫ قناة الاشتراك ⌔ '},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ المتجر ⌔' then 
+if text == '↫ المتجر ⌔ ' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي المطور \n⌔︙اليك الازرار الخاصه بمتجر سورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي المطور \n⌔ ︙اليك الازرار الخاصه بمتجر سورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫  المتجر ⌔'},
+{'↫  المتجر ⌔ '},
 {'تفعيل ملف AddedMe.lua','تعطيل ملف AddedMe.lua'},
 {'تفعيل ملف AutoFile.lua','تعطيل ملف AutoFile.lua'},
 {'تفعيل ملف TagAll.lua','تعطيل ملف TagAll.lua'},
@@ -1905,107 +2124,107 @@ local key = {
 {'تفعيل ملف MuteNames.lua','تعطيل ملف MuteNames.lua'},
 {'تفعيل ملف ChangeUser.lua','تعطيل ملف ChangeUser.lua'},
 {'تفعيل ملف ChangePhoto.lua','تعطيل ملف ChangePhoto.lua'},
-{'↫ رجوع ⌔'},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '↫ الاوامر الخدميه ⌔' or text == '/play' or text == '↫  رجوع  ⌔' or text == 'اوامر الخدميه' or text == '/free' then
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي \n⌔︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+if text == '↫ الاوامر الخدميه ⌔ ' or text == '/play' or text == '↫  رجوع  ⌔ ' or text == 'اوامر الخدميه' or text == '/free' then
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي \n⌔ ︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ اوامر التسليه ⌔','↫ الاوامر الخدميه  ⌔'},
-{'↫ اوامر النسب ⌔','↫ البوتات ⌔'},
-{'↫ العاب ⌔'},
-{'↫  السورس ⌔','↫  المطور ⌔'},
-{'↫ رجوع ⌔'},
+{'↫ اوامر التسليه ⌔ ','↫ الاوامر الخدميه  ⌔ '},
+{'↫ اوامر النسب ⌔ ','↫ البوتات ⌔ '},
+{'↫ العاب ⌔ '},
+{'↫  السورس ⌔ ','↫  المطور ⌔ '},
+{'↫ رجوع ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ اوامر التسليه ⌔' then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي \n⌔︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+if text == '↫ اوامر التسليه ⌔ ' then 
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي \n⌔ ︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ غنيلي ⌔','↫ اغنيه ⌔'},
-{'↫ شعبي ⌔','↫ ريمكس ⌔'},
-{'↫ صوره ⌔','↫ متحركه ⌔'},
-{'↫ مسلسل ⌔','↫ فلم ⌔'},
-{'↫  رجوع  ⌔'},
+{'↫ غنيلي ⌔ ','↫ اغنيه ⌔ '},
+{'↫ ميمز ⌔ ','↫ ريمكس ⌔ '},
+{'↫ صوره ⌔ ','↫ متحركه ⌔ '},
+{'↫ مسلسل ⌔ ','↫ فلم ⌔ '},
+{'↫  رجوع  ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ الاوامر الخدميه  ⌔' then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي \n⌔︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+if text == '↫ الاوامر الخدميه  ⌔ ' then 
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي \n⌔ ︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ الابراج ⌔','↫ حساب العمر ⌔'},
-{'↫ الزخرفه ⌔','↫ معاني الاسماء ⌔'},
-{'↫ الحمايه ⌔'},
-{'↫  معرفي ⌔','↫  اسمي ⌔','↫ ايديي ⌔'},
-{'↫  نبذتي ⌔','↫ نبذا ⌔'},
-{'↫  رجوع  ⌔'},
+{'↫ الابراج ⌔ ','↫ حساب العمر ⌔ '},
+{'↫ الزخرفه ⌔ ','↫ معاني الاسماء ⌔ '},
+{'↫ الحمايه ⌔ '},
+{'↫  معرفي ⌔ ','↫  اسمي ⌔ ','↫ ايديي ⌔ '},
+{'↫  نبذتي ⌔ ','↫ نبذا ⌔ '},
+{'↫  رجوع  ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ البوتات ⌔' then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي \n⌔︙اليك الازرار الخاصه بأوامر البوتات الخاصه بسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+if text == '↫ البوتات ⌔ ' then 
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي \n⌔ ︙اليك الازرار الخاصه بأوامر البوتات الخاصه بسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ بوت الحذف ⌔','↫ بوت الهمسه ⌔'},
-{'↫ بوت اليوتيوب ⌔','↫ بوت الكت ⌔'},
-{'↫ بوت الزخرفه ⌔'},
-{'↫  رجوع  ⌔'},
+{'↫ بوت الحذف ⌔ ','↫ بوت الهمسه ⌔ '},
+{'↫ بوت اليوتيوب ⌔ ','↫ بوت الكت ⌔ '},
+{'↫ بوت الزخرفه ⌔ '},
+{'↫  رجوع  ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ اوامر النسب ⌔' then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي \n⌔︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس كيلوا فقط اضغط على الامر الذي تريد تنفيذه'
+if text == '↫ اوامر النسب ⌔ ' then 
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي \n⌔ ︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ نسبه الكره ⌔','↫ نسبه الحب ⌔'},
-{'↫ نسبه الرجوله ⌔','↫ نسبه الانوثه ⌔'},
-{'↫ نسبه الغباء ⌔','↫ نسبه الجمال ⌔'},
-{'↫ نسبه الخيانه ⌔'},
-{'↫  رجوع  ⌔'},
+{'↫ نسبه الكره ⌔ ','↫ نسبه الحب ⌔ '},
+{'↫ نسبه الرجوله ⌔ ','↫ نسبه الانوثه ⌔ '},
+{'↫ نسبه الغباء ⌔ ','↫ نسبه الجمال ⌔ '},
+{'↫ نسبه الخيانه ⌔ '},
+{'↫  رجوع  ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
-if text == '↫ العاب ⌔' then 
-local Sudo_Welcome = '⌔︙اهلا بك مجددا عزيزي \n⌔︙اليك الازرار الخاصه بألعاب سورس كيلوا فقط اضغط على اللعبه الذي تريد لعبها'
+if text == '↫ العاب ⌔ ' then 
+local Sudo_Welcome = '⌔ ︙اهلا بك مجددا عزيزي \n⌔ ︙اليك الازرار الخاصه بألعاب سورس بروكس فقط اضغط على اللعبه الذي تريد لعبها'
 local key = {
-{'↫ الالعاب ⌔','↫ الالعاب المتطوره ⌔'},
-{'↫ كت ⌔'},
-{'↫ سمايلات ⌔','↫ معاني ⌔'},
-{'↫ ترتيب ⌔','↫ حزوره ⌔'},
-{'↫ العكس ⌔','↫ المختلف ⌔'},
-{'↫ امثله ⌔','↫ اسئله ⌔'},
-{'↫ تخمين ⌔',''},
-{'↫ رياضيات ⌔','↫ انكليزي ⌔'},
-{'↫  رجوع  ⌔'},
+{'↫ الالعاب ⌔ ','↫ الالعاب المتطوره ⌔ '},
+{'↫ كت ⌔ '},
+{'↫ سمايلات ⌔ ','↫ معاني ⌔ '},
+{'↫ ترتيب ⌔ ','↫ حزوره ⌔ '},
+{'↫ العكس ⌔ ','↫ المختلف ⌔ '},
+{'↫ امثله ⌔ ','↫ اسئله ⌔ '},
+{'↫ تخمين ⌔ ',''},
+{'↫ رياضيات ⌔ ','↫ انكليزي ⌔ '},
+{'↫  رجوع  ⌔ '},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 --     Source Prox     --
 if text == '/start' and ChCheck(msg) then  
-if not DevAbs:get(Lions..'Abs:Start:Time'..msg.sender_user_id_) then
-tdcli_function({ID="GetUser",user_id_=Lions},function(arg,dp) 
+if not DevRio:get(Prox..'Rio:Start:Time'..msg.sender_user_id_) then
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
 local inline = {
-{{text="⌔ المطور .",url="t.me/"..(dp.username_ or "")}},
-{{text="⌔ السورس .",url="https://t.me/"},{text="⌔ لتنصيب بوت .",url="https://t.me/"}},{{text="⌔ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
+{{text="⌔ المطور .",url="t.me/"..(dp.username_ or "H_I_v_e_e_n101")}},
+{{text="⌔ السورس .",url="https://t.me/F_L_3"},{text="⌔ لتنصيب بوت .",url="https://t.me/USER_LAREN"}},{{text="⌔ اضفني في مجموعتك .",url="t.me/"..dp.username_.."?startgroup=botstart"}}
 }
-local start = DevAbs:get(Lions.."Abs:Start:Bot")
+local start = DevRio:get(Prox.."Rio:Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = "⌔︙مرحبا انا بوت اسمي "..NameBot.."\n⌔︙اختصاصي حماية المجموعات\n⌔︙من التفليش والسبام والخخ .. . ،\n⌔︙تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر ↫ تفعيل\n⌔︙سيتم رفع الادمنيه والمنشئ تلقائيا\n⌔︙ارسل امر /free او /play للتمتع باوامر الاعضاء"
+Start_Source = "⌔ ︙مرحبا انا بوت اسمي "..NameBot.."\n⌔ ︙اختصاصي حماية المجموعات\n⌔ ︙من التفليش والسبام والخخ .. . ،\n⌔ ︙تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر ↫ تفعيل\n⌔ ︙سيتم رفع الادمنيه والمنشئ تلقائيا\n⌔ ︙ارسل امر /free او /play للتمتع باوامر الاعضاء"
 end 
 SendInline(msg.chat_id_,Start_Source,nil,inline)
 end,nil)
 end
-DevAbs:setex(Lions..'Abs:Start:Time'..msg.sender_user_id_,300,true)
+DevRio:setex(Prox..'Rio:Start:Time'..msg.sender_user_id_,300,true)
 return false
-end
+end 
 --     Source Prox     --
 if not SecondSudo(msg) and not DevRio:sismember(Prox..'Rio:Ban:Pv',msg.sender_user_id_) and not DevRio:get(Prox..'Rio:Texting:Pv') then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,chat) 
@@ -4424,6 +4643,235 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?cha
 end,nil) 
 end
 --     Source Prox     --
+
+if text == 'الالعاب' then
+local Text = [[
+🎮 اهلا بك في قسم الالعاب ..↑↓
+ اختر العبه الذي تريدها .↑↓
+ده من الازرار بلاسفل . ↓
+╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
+❲[Sꪮꪊ𝘳ᥴꫀ Qꪊꫀꫀꪀ 𓃠](t.me/Source_Queen)❳ 
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'العاب السورس💌', callback_data="/game2"},{text = 'مميزات🎪', callback_data="/game3"},
+},
+{
+{text = 'العاب متطوره🎮', callback_data="/game1"},
+},
+{
+{text = 'Sꪮꪊ𝘳ᥴꫀ Qꪊꫀꫀꪀ 𓃠', url="t.me/Source_Queen"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+--     Source Prox     --
+if text == 'بيع نقاطي' and ChCheck(msg) then
+if tonumber((DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
+Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  لم تربح اي نقطه\n⌔  ارسل ↫ الالعاب للعب', 1, 'md')
+else
+DevRio0 = (DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_) * 50)
+DevRio:incrby(Prox..'Rio:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_,DevRio0)
+Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  تم بيع '..(DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_))..' من نقاطك\n⌔  كل نقطه تساوي 50 رساله', 'md')
+DevRio:del(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_)
+end
+end
+--     Source Prox     --
+if text == 'رفع المشرفين' and ChCheck(msg) or text == 'رفع الادمنيه' and ChCheck(msg) then  
+tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 200},function(arg,rio) 
+local num = 0
+local admins = rio.members_  
+for i=0 , #admins do   
+if rio.members_[i].bot_info_ == false and rio.members_[i].status_.ID == "ChatMemberStatusEditor" then
+DevRio:sadd(Prox..'Rio:Admins:'..msg.chat_id_, admins[i].user_id_)   
+num = num + 1
+tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_},function(arg,dp) 
+if dp.first_name_ == false then
+DevRio:srem(Prox..'Rio:Admins:'..msg.chat_id_, admins[i].user_id_)   
+end
+end,nil)   
+else
+DevRio:srem(Prox..'Rio:Admins:'..msg.chat_id_, admins[i].user_id_)   
+end 
+if rio.members_[i].status_.ID == "ChatMemberStatusCreator" then  
+Manager_id = admins[i].user_id_  
+DevRio:sadd(Prox..'Rio:BasicConstructor:'..msg.chat_id_,Manager_id)  
+DevRio:sadd(Prox..'Rio:RioConstructor:'..msg.chat_id_,Manager_id)   
+end  
+end  
+if num == 0 then
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  لا يوجد ادمنيه ليتم رفعهم\n⌔  تم رفع مالك المجموعه", 1, 'md')
+else
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  تم رفع '..num..' من الادمنيه \n⌔  تم رفع مالك المجموعه', 1, 'md')
+end
+end,nil) 
+end
+--     Source Prox     --
+if text == 'غادر' and SudoBot(msg) and ChCheck(msg) then
+if DevRio:get(Prox.."Rio:Left:Bot"..Prox) then
+Dev_Rio(msg.chat_id_,msg.id_, 1, "⌔  المغادره معطله من قبل المطور الاساسي", 1, 'md')
+return false  
+end
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  تم مغادرة المجموعه \n⌔  تم حذف جميع بياناتها ', 1, 'md')
+ChatLeave(msg.chat_id_, Prox)
+DevRio:srem(Prox.."Rio:Groups",msg.chat_id_)
+end
+--     Source Prox     --
+if text ==('موقعي') and ChCheck(msg) then
+tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
+if da.status_.ID == "ChatMemberStatusCreator" then
+rtpa = 'المنشئ'
+elseif da.status_.ID == "ChatMemberStatusEditor" then
+rtpa = 'الادمن'
+elseif da.status_.ID == "ChatMemberStatusMember" then
+rtpa = 'عضو'
+end
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  موقعك ↫ '..rtpa, 1, 'md')
+end,nil)
+end
+--     Source Prox     --
+if text == "معلوماتي" and ChCheck(msg) then
+function get_me(extra,result,success)
+local msguser = tonumber(DevRio:get(Prox..'Rio:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_))
+local user_msgs = DevRio:get(Prox..'Rio:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
+local cont = (tonumber(DevRio:get(Prox..'Rio:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
+local user_nkt = tonumber(DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)
+if result.username_ then username = '@'..result.username_ else username = 'لا يوجد' end
+if result.last_name_ then lastname = result.last_name_ else lastname = '' end
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  اسمك ↫ ❨ ['..result.first_name_..'] ❩\n⌔  معرفك ↫ ❨ ['..username..'] ❩\n⌔  ايديك ↫ ❨ `'..result.id_..'` ❩\n⌔  نقاطك ↫ ❨ '..user_nkt..' ❩\n⌔  رسائلك ↫ ❨ '..user_msgs..' ❩\n⌔  جهاتك ↫ ❨ '..cont..' ❩\n⌔  تفاعلك ↫ '..formsgs(msguser)..'\n⌔  رتبتك ↫ '..IdRank(msg.sender_user_id_, msg.chat_id_), 1, 'md')
+end
+getUser(msg.sender_user_id_,get_me)
+end
+end
+--     Source Prox     --
+if text == "تعيين قناة الاشتراك" or text == "تغيير قناة الاشتراك" or text == "تعيين الاشتراك الاجباري" or text == "وضع قناة الاشتراك" or text == "↫ تعيين قناة الاشتراك ⌔" then
+if not Sudo(msg) then
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  للمطور الاساسي فقط ', 1, 'md')
+else
+DevRio:setex(Prox..'DevRio4'..msg.sender_user_id_,360,true)
+send(msg.chat_id_, msg.id_, '⌔  ارسل لي معرف قناة الاشتراك الان')
+end
+return false  
+end
+if text == "تفعيل الاشتراك الاجباري" or text == "↫  تفعيل الاشتراك الاجباري ⌔" then  
+if not Sudo(msg) then
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  للمطور الاساسي فقط ', 1, 'md')
+else
+if DevRio:get(Prox..'Rio:ChId') then
+local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevRio:get(Prox.."Rio:ChId"))
+local GetInfo = JSON.decode(Check)
+send(msg.chat_id_, msg.id_,"⌔  الاشتراك الاجباري مفعل \n⌔  على القناة ↫ [@"..GetInfo.result.username.."]")
+else
+DevRio:setex(Prox..'DevRio4'..msg.sender_user_id_,360,true)
+send(msg.chat_id_, msg.id_,"⌔  لاتوجد قناة لتفعيل الاشتراك\n⌔  ارسل لي معرف قناة الاشتراك الان")
+end
+end
+return false  
+end
+if text == "تعطيل الاشتراك الاجباري" or text == "↫  تعطيل الاشتراك الاجباري ⌔" then  
+if not Sudo(msg) then
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  للمطور الاساسي فقط ', 1, 'md')
+else
+DevRio:del(Prox..'Rio:ChId')
+local ProxTeam = '⌔  اهلا عزيزي ↫ '..RioRank(msg)..' \n⌔  تم تعطيل الاشتراك الاجباري'
+riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, ProxTeam, 14, string.len(msg.sender_user_id_))
+end
+return false  
+end
+if text == "حذف قناة الاشتراك" or text == "حذف قناه الاشتراك" or text == "↫ حذف قناة الاشتراك ⌔" then
+if not SecondSudo(msg) then
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  للمطور الاساسي فقط ', 1, 'md')
+else
+DevRio:del(Prox..'Rio:ChId')
+Dev_Rio(msg.chat_id_, msg.id_, 1,"⌔  تم حذف قناة الاشتراك الاجباري", 1, 'md') 
+end
+end
+if Sudo(msg) then
+if text == 'جلب قناة الاشتراك' or text == 'قناة الاشتراك' or text == 'الاشتراك الاجباري' or text == 'قناة الاشتراك الاجباري' or text == '↫ قناة الاشتراك ⌔' then
+if DevRio:get(Prox..'Rio:ChId') then
+local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevRio:get(Prox.."Rio:ChId"))
+local GetInfo = JSON.decode(Check)
+send(msg.chat_id_, msg.id_, "⌔  قناة الاشتراك ↫ [@"..GetInfo.result.username.."]")
+else
+send(msg.chat_id_, msg.id_, "⌔  لاتوجد قناة في الاشتراك الاجباري")
+end
+return false  
+end end
+--     Source Prox     --
+if SudoBot(msg) then
+if text == 'اذاعه للكل بالتوجيه' and tonumber(msg.reply_to_message_id_) > 0 then
+function ProxTeam(extra,result,success)
+if DevRio:get(Prox.."Rio:Send:Bot"..Prox) and not SecondSudo(msg) then 
+send(msg.chat_id_, msg.id_,"⌔  الاذاعه معطله من قبل المطور الاساسي")
+return false
+end
+local GpList = DevRio:smembers(Prox.."Rio:Groups")
+for k,v in pairs(GpList) do
+tdcli_function({ID="ForwardMessages", chat_id_ = v, from_chat_id_ = msg.chat_id_, message_ids_ = {[0] = result.id_}, disable_notification_ = 0, from_background_ = 1},function(a,t) end,nil) 
+end
+local PvList = DevRio:smembers(Prox.."Rio:Users")
+for k,v in pairs(PvList) do
+tdcli_function({ID="ForwardMessages", chat_id_ = v, from_chat_id_ = msg.chat_id_, message_ids_ = {[0] = result.id_}, disable_notification_ = 0, from_background_ = 1},function(a,t) end,nil) 
+end
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  تم اذاعة رسالتك بالتوجيه \n⌔  ‏في ↫ ❨ '..#GpList..' ❩ مجموعه \n⌔  والى ↫ ❨ '..#PvList..' ❩ مشترك \n ✓', 1, 'md')
+end
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),ProxTeam)
+end
+end
+--     Source Prox     --
+if text == "مشاهده المنشور" and ChCheck(msg) or text == "مشاهدات المنشور" and ChCheck(msg) or text == "عدد المشاهدات" and ChCheck(msg) then
+DevRio:set(Prox..'Rio:viewget'..msg.sender_user_id_,true)
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
+end
+--     Source Prox     --
+--     Source keloa     --
+if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == "يا سورس" then
+local Text =[[
+
+╭ ─ ─ ─ ─ ─ ─ ─ 🚨 . 
+╰➛ ⌯ 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 𝗦𝗼𝘂𝗿𝗰𝗲 𝗸𝗲𝗹𝗼𝗮 ⌯
+╭ ─ ─ ─ ─ ─ ─ ─  🤍. 
+╰➛ ⌯ 𝗧𝗵𝗲 𝗕𝗲𝘀𝘁 𝗦𝗼𝘂𝗿𝗰𝗲 𝗜𝗻 𝗧𝗲𝗹𝘆 ⌯
+╭ ─ ─ ─ ─ ─ ─ ─ 🫀. 
+╰➛ ⌯ 𝗦𝗽𝗲𝗲𝗱 , 𝗔𝗰𝗰𝘂𝗥𝗮𝗰𝘆 , 𝗦𝗮𝗙𝗲𝗧𝘆 ⌯
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⌯ 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝗸𝗲𝗹𝗼𝗮 ⌯ ',url="t.me/F_L_3"}},
+{{text = '⌯ 𝗛𝗶𝗮𝘃𝗲𝗲𝗻 ⌯',url="t.me/I_4_J"},{text = '⌯ 𝙢𝙖𝙜𝙞𝙙 ⌯',url="t.me/MAGID_ALI_10"}},
+{{text = '⌯ 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝗩𝗜𝗣 ⌯',url="t.me/source_Laren"}},
+{{text = '⌯ 𝙀𝙭𝙥 𝙠𝙚𝙡𝙤𝙖 ⌯ ',url="t.me/Y_2_I"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/F_L_3/84&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'نكت' and ChCheck(msg) or text == 'نكته' and ChCheck(msg) or text == 'ضحكني' and ChCheck(msg) or text == '↫ ضحكه⌔' and ChCheck(msg) then
+if not DevRio:get(Prox..'Rio:Lock:Games'..msg.chat_id_) then
+local ProxTeam = {
+" مرة واحد مصري دخل سوبر ماركت في الكويت عشان يشتري ولاعة..    راح عشان يحاسب بيقوله الولاعة ديه بكام؟   قاله دينار..  قاله منا عارف ان هي نار بس بكام 🤓😂", 
+"بنت حبت تشتغل مع رئيس عصابة..   شغلها في غسيل الأموال 🤓😂 ", 
+"واحد بيشتكي لصاحبه بيقوله أنا مافيش حد بيحبني ولا يفتكرني أبدًا، ومش عارف أعمل إيه.. قاله سهلة.. استلف من الناس فلوس هيسألوا عليك كل يوم! 🤓😂",
+"ﻣﺮه واﺣﺪ ﻣﺴﻄﻮل ﻣﺎﺷﻰ ﻓﻰ اﻟﺸﺎرع ﻟﻘﻰ مذﻳﻌﻪ ﺑﺘﻘﻮﻟﻪ ﻟﻮ ﺳﻤﺤﺖ ﻓﻴﻦ اﻟﻘﻤﺮ؟    ﻗﺎﻟﻬﺎ اﻫﻮه..   ﻗﺎﻟﺘﻠﻮ ﻣﺒﺮوك ﻛﺴﺒﺖ ﻋﺸﺮﻳﻦ ﺟﻨﻴﻪ..   ﻗﺎﻟﻬﺎ ﻓﻰ واﺣﺪ ﺗﺎﻧﻰ ﻫﻨﺎك اﻫﻮه. 🤓😂",
+"واحده ست سايقه على الجي بي اس..  قالها انحرفي قليلًا..   قلعت الطرحة. 🤓😂 ",
+"مرة واحد غبي معاه عربية قديمة جدًا وبيحاول يبيعها وماحدش راضي يشتريها.. راح لصاحبه حكاله المشكلة.. صاحبه قاله عندي لك فكرة جهنمية هاتخليها تتباع الصبح.. أنت تجيب علامة مرسيدس وتحطها عليها. بعد أسبوعين صاحبه شافه صدفة قاله بعت العربية ولا لاء؟ قاله انت  مجنون؟ حد يبيع مرسيدس؟ 🤓😂",
+"مره واحد بلديتنا كان بيدق مسمار فى الحائط فالمسمار وقع منه فقال له :تعالى ف مجاش, فقال له: تعالي ف مجاش. فراح بلديتنا رامي على المسمار شوية مسمامير وقال: هاتوه. 🤓😂",
+"واحدة عملت حساب وهمي ودخلت تكلم جوزها منه.. ومبسوطة أوي وبتضحك.. سألوها بتضحكي على إيه؟ قالت لهم أول مرة يقول لي كلام حلو من ساعة ما اتجوزنا. 🤓😂",
+"بنت حبت تشتغل مع رئيس عصابة..   شغلها في غسيل الأموال 🤓😂",
+"مره واحد اشترى فراخ..   علشان يربيها فى قفص صدره.🤓😂",
+"مرة واحد من الفيوم مات..   أهله صوصوا عليه.🤓😂",
+"ﻣﺮه واﺣﺪ ﻣﺴﻄﻮل ﻣﺎﺷﻰ ﻓﻰ اﻟﺸﺎرع ﻟﻘﻰ مذﻳﻌﻪ ﺑﺘﻘﻮﻟﻪ ﻟﻮ ﺳﻤﺤﺖ ﻓﻴﻦ اﻟﻘﻤﺮ؟    ﻗﺎﻟﻬﺎ اﻫﻮه..   ﻗﺎﻟﺘﻠﻮ ﻣﺒﺮوك ﻛﺴﺒﺖ ﻋﺸﺮﻳﻦ ﺟﻨﻴﻪ..   ﻗﺎﻟﻬﺎ ﻓﻰ واﺣﺪ ﺗﺎﻧﻰ ﻫﻨﺎك اﻫﻮه.🤓😂",
+"مره واحد شاط كرة فى المقص..   اتخرمت. 🤓😂",
+"مرة واحد رايح لواحد صاحبه.. فا البواب وقفه بيقول له انت طالع لمين.. قاله طالع أسمر شوية لبابايا.. قاله يا أستاذ طالع لمين في العماره 🤓😂",
+} 
+Dev_Rio(msg.chat_id_, msg.id_, 1, ''..ProxTeam[math.random(#ProxTeam)]..'' , 1, 'md')  
+return false
+end
+end
+--     Source keloa     --
 if text == 'كت تويت' and ChCheck(msg) or text == 'كت' and ChCheck(msg) or text == 'تويت' and ChCheck(msg) or text == '↫ كت ⌔' and ChCheck(msg) then
 if not DevRio:get(Prox..'Rio:Lock:Games'..msg.chat_id_) then
 local ProxTeam = {
@@ -4858,237 +5306,6 @@ return false
 end
 end
 
-if text == 'الالعاب' then
-local Text = [[
-🎮 اهلا بك في قسم الالعاب ..↑↓
- اختر العبه الذي تريدها .↑↓
-ده من الازرار بلاسفل . ↓
-╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-❲[Sꪮꪊ𝘳ᥴꫀ Qꪊꫀꫀꪀ 𓃠](t.me/Source_Queen)❳ 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'العاب السورس💌', callback_data="/game2"},{text = 'مميزات🎪', callback_data="/game3"},
-},
-{
-{text = 'العاب متطوره🎮', callback_data="/game1"},
-},
-{
-{text = 'Sꪮꪊ𝘳ᥴꫀ Qꪊꫀꫀꪀ 𓃠', url="t.me/Source_Queen"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
---     Source Prox     --
-if text == 'بيع نقاطي' and ChCheck(msg) then
-if tonumber((DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
-Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  لم تربح اي نقطه\n⌔  ارسل ↫ الالعاب للعب', 1, 'md')
-else
-DevRio0 = (DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_) * 50)
-DevRio:incrby(Prox..'Rio:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_,DevRio0)
-Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  تم بيع '..(DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_))..' من نقاطك\n⌔  كل نقطه تساوي 50 رساله', 'md')
-DevRio:del(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_)
-end
-end
---     Source Prox     --
-if text == 'رفع المشرفين' and ChCheck(msg) or text == 'رفع الادمنيه' and ChCheck(msg) then  
-tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 200},function(arg,rio) 
-local num = 0
-local admins = rio.members_  
-for i=0 , #admins do   
-if rio.members_[i].bot_info_ == false and rio.members_[i].status_.ID == "ChatMemberStatusEditor" then
-DevRio:sadd(Prox..'Rio:Admins:'..msg.chat_id_, admins[i].user_id_)   
-num = num + 1
-tdcli_function ({ID = "GetUser",user_id_ = admins[i].user_id_},function(arg,dp) 
-if dp.first_name_ == false then
-DevRio:srem(Prox..'Rio:Admins:'..msg.chat_id_, admins[i].user_id_)   
-end
-end,nil)   
-else
-DevRio:srem(Prox..'Rio:Admins:'..msg.chat_id_, admins[i].user_id_)   
-end 
-if rio.members_[i].status_.ID == "ChatMemberStatusCreator" then  
-Manager_id = admins[i].user_id_  
-DevRio:sadd(Prox..'Rio:BasicConstructor:'..msg.chat_id_,Manager_id)  
-DevRio:sadd(Prox..'Rio:RioConstructor:'..msg.chat_id_,Manager_id)   
-end  
-end  
-if num == 0 then
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  لا يوجد ادمنيه ليتم رفعهم\n⌔  تم رفع مالك المجموعه", 1, 'md')
-else
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  تم رفع '..num..' من الادمنيه \n⌔  تم رفع مالك المجموعه', 1, 'md')
-end
-end,nil) 
-end
---     Source Prox     --
-if text == 'غادر' and SudoBot(msg) and ChCheck(msg) then
-if DevRio:get(Prox.."Rio:Left:Bot"..Prox) then
-Dev_Rio(msg.chat_id_,msg.id_, 1, "⌔  المغادره معطله من قبل المطور الاساسي", 1, 'md')
-return false  
-end
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  تم مغادرة المجموعه \n⌔  تم حذف جميع بياناتها ', 1, 'md')
-ChatLeave(msg.chat_id_, Prox)
-DevRio:srem(Prox.."Rio:Groups",msg.chat_id_)
-end
---     Source Prox     --
-if text ==('موقعي') and ChCheck(msg) then
-tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
-if da.status_.ID == "ChatMemberStatusCreator" then
-rtpa = 'المنشئ'
-elseif da.status_.ID == "ChatMemberStatusEditor" then
-rtpa = 'الادمن'
-elseif da.status_.ID == "ChatMemberStatusMember" then
-rtpa = 'عضو'
-end
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  موقعك ↫ '..rtpa, 1, 'md')
-end,nil)
-end
---     Source Prox     --
-if text == "معلوماتي" and ChCheck(msg) then
-function get_me(extra,result,success)
-local msguser = tonumber(DevRio:get(Prox..'Rio:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_))
-local user_msgs = DevRio:get(Prox..'Rio:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
-local cont = (tonumber(DevRio:get(Prox..'Rio:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
-local user_nkt = tonumber(DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)
-if result.username_ then username = '@'..result.username_ else username = 'لا يوجد' end
-if result.last_name_ then lastname = result.last_name_ else lastname = '' end
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  اسمك ↫ ❨ ['..result.first_name_..'] ❩\n⌔  معرفك ↫ ❨ ['..username..'] ❩\n⌔  ايديك ↫ ❨ `'..result.id_..'` ❩\n⌔  نقاطك ↫ ❨ '..user_nkt..' ❩\n⌔  رسائلك ↫ ❨ '..user_msgs..' ❩\n⌔  جهاتك ↫ ❨ '..cont..' ❩\n⌔  تفاعلك ↫ '..formsgs(msguser)..'\n⌔  رتبتك ↫ '..IdRank(msg.sender_user_id_, msg.chat_id_), 1, 'md')
-end
-getUser(msg.sender_user_id_,get_me)
-end
-end
---     Source Prox     --
-if text == "تعيين قناة الاشتراك" or text == "تغيير قناة الاشتراك" or text == "تعيين الاشتراك الاجباري" or text == "وضع قناة الاشتراك" or text == "↫ تعيين قناة الاشتراك ⌔" then
-if not Sudo(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  للمطور الاساسي فقط ', 1, 'md')
-else
-DevRio:setex(Prox..'DevRio4'..msg.sender_user_id_,360,true)
-send(msg.chat_id_, msg.id_, '⌔  ارسل لي معرف قناة الاشتراك الان')
-end
-return false  
-end
-if text == "تفعيل الاشتراك الاجباري" or text == "↫  تفعيل الاشتراك الاجباري ⌔" then  
-if not Sudo(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  للمطور الاساسي فقط ', 1, 'md')
-else
-if DevRio:get(Prox..'Rio:ChId') then
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevRio:get(Prox.."Rio:ChId"))
-local GetInfo = JSON.decode(Check)
-send(msg.chat_id_, msg.id_,"⌔  الاشتراك الاجباري مفعل \n⌔  على القناة ↫ [@"..GetInfo.result.username.."]")
-else
-DevRio:setex(Prox..'DevRio4'..msg.sender_user_id_,360,true)
-send(msg.chat_id_, msg.id_,"⌔  لاتوجد قناة لتفعيل الاشتراك\n⌔  ارسل لي معرف قناة الاشتراك الان")
-end
-end
-return false  
-end
-if text == "تعطيل الاشتراك الاجباري" or text == "↫  تعطيل الاشتراك الاجباري ⌔" then  
-if not Sudo(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  للمطور الاساسي فقط ', 1, 'md')
-else
-DevRio:del(Prox..'Rio:ChId')
-local ProxTeam = '⌔  اهلا عزيزي ↫ '..RioRank(msg)..' \n⌔  تم تعطيل الاشتراك الاجباري'
-riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, ProxTeam, 14, string.len(msg.sender_user_id_))
-end
-return false  
-end
-if text == "حذف قناة الاشتراك" or text == "حذف قناه الاشتراك" or text == "↫ حذف قناة الاشتراك ⌔" then
-if not SecondSudo(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  للمطور الاساسي فقط ', 1, 'md')
-else
-DevRio:del(Prox..'Rio:ChId')
-Dev_Rio(msg.chat_id_, msg.id_, 1,"⌔  تم حذف قناة الاشتراك الاجباري", 1, 'md') 
-end
-end
-if Sudo(msg) then
-if text == 'جلب قناة الاشتراك' or text == 'قناة الاشتراك' or text == 'الاشتراك الاجباري' or text == 'قناة الاشتراك الاجباري' or text == '↫ قناة الاشتراك ⌔' then
-if DevRio:get(Prox..'Rio:ChId') then
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevRio:get(Prox.."Rio:ChId"))
-local GetInfo = JSON.decode(Check)
-send(msg.chat_id_, msg.id_, "⌔  قناة الاشتراك ↫ [@"..GetInfo.result.username.."]")
-else
-send(msg.chat_id_, msg.id_, "⌔  لاتوجد قناة في الاشتراك الاجباري")
-end
-return false  
-end end
---     Source Prox     --
-if SudoBot(msg) then
-if text == 'اذاعه للكل بالتوجيه' and tonumber(msg.reply_to_message_id_) > 0 then
-function ProxTeam(extra,result,success)
-if DevRio:get(Prox.."Rio:Send:Bot"..Prox) and not SecondSudo(msg) then 
-send(msg.chat_id_, msg.id_,"⌔  الاذاعه معطله من قبل المطور الاساسي")
-return false
-end
-local GpList = DevRio:smembers(Prox.."Rio:Groups")
-for k,v in pairs(GpList) do
-tdcli_function({ID="ForwardMessages", chat_id_ = v, from_chat_id_ = msg.chat_id_, message_ids_ = {[0] = result.id_}, disable_notification_ = 0, from_background_ = 1},function(a,t) end,nil) 
-end
-local PvList = DevRio:smembers(Prox.."Rio:Users")
-for k,v in pairs(PvList) do
-tdcli_function({ID="ForwardMessages", chat_id_ = v, from_chat_id_ = msg.chat_id_, message_ids_ = {[0] = result.id_}, disable_notification_ = 0, from_background_ = 1},function(a,t) end,nil) 
-end
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  تم اذاعة رسالتك بالتوجيه \n⌔  ‏في ↫ ❨ '..#GpList..' ❩ مجموعه \n⌔  والى ↫ ❨ '..#PvList..' ❩ مشترك \n ✓', 1, 'md')
-end
-getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),ProxTeam)
-end
-end
---     Source Prox     --
-if text == "مشاهده المنشور" and ChCheck(msg) or text == "مشاهدات المنشور" and ChCheck(msg) or text == "عدد المشاهدات" and ChCheck(msg) then
-DevRio:set(Prox..'Rio:viewget'..msg.sender_user_id_,true)
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
-end
---     Source Prox     --
-if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == "يا سورس" then
-local Text =[[
-
-╭ ─ ─ ─ ─ ─ ─ ─ 🚨 . 
-╰➛  ᗯEᒪᑕOᗰE TO 𝘚ᑌᖇ𝘚E KEᒪOᗩ 𖠧
-╭ ─ ─ ─ ─ ─ ─ ─  🤍. 
-╰➛  TᕼE ᗷE𝘚T 𝘚OᑌᖇᑕE Iᑎ TEᒪI 𖠧
-╭ ─ ─ ─ ─ ─ ─ ─ 🫀. 
-╰➛ ᗷᗰ ᗰE TO ᗰᗩKE YOᑌᖇ Oᗯᑎ OᑎE 𖠧 .
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '𝘚ᑌᖇ𝘚E KEᒪOᗩ ',url="t.me/F_L_3"}},
-{{text = 'ᕼIᗩᐯEEᑎ',url="t.me/C_F_4"},{text = 'ᗰᗩGIᗪ',url="t.me/@MAGID_ALI_10"}},
-{{text = '࿈『⌯﮼ＶＩＰ ﮼⌯』࿈⁩',url="t.me/source_Laren"}},
-{{text = 'ᗩᗪᗪ SOᑌᖇᑕE ',url="t.me/Y_2_I"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/F_2_L_4/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-
---     Source DevProx     --
-if text == 'المطور' or text == 'مطور' or text == '↫ المطور ⌔' then
-tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
-local msg_id = msg.id_/2097152/0.5
-Text = "*⋆ Dev Name ⤌ * ["..result.first_name_.."](T.me/"..result.username_..")\n*⋆ Dev User ⤌* [@"..result.username_.."]"
-keyboard = {}
-keyboard.inline_keyboard = {{{text = ''..result.first_name_..' ',url="t.me/"..result.username_ or F_L_3}}}
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end,nil)
-end
-
-if text == 'بوت حذف' or text == 'بوت الحذف' or text == 'رابط الحذف' then
-local Text = [[
-اليك بوتات الحذف 
-احذف بقا قرفنا منك 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'Iᑎ𝑆TᗩGᖇᗩᗰ', url="https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/"}}, 
-{{text = 'TEᒪEGᖇᗩᗰ',url="https://my.telegram.org/auth?to=delete"}}, {{text = 'ᗷOT TEᒪEGᖇᗩᗰ ',url="https://t.me/LC6BOT"}},
-{{text = 'ᖴEᑕEᗷOOK', url="https://www.facebook.com/help/deleteaccount"}}, 
-{{text = '𝑆ᑎᗩᑭ𝑆ᕼT', url="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount"}}, 
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/laren_aoamer/385/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-
 if text == 'كتبات' and ChCheck(msg) or text == 'كتابه' and ChCheck(msg) or text == 'كتباتي' and ChCheck(msg) or text == 'حكمه' and ChCheck(msg) then
 if not DevRio:get(Prox..'Rio:Lock:Games'..msg.chat_id_) then
 local ProxTeam = {
@@ -5126,6 +5343,57 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, ''..ProxTeam[math.random(#ProxTeam)]..'' , 1, 
 return false
 end
 end
+
+if text == 'باد' and ChCheck(msg) or text == 'xx' and ChCheck(msg) or text == 'سكس' and ChCheck(msg) or text == 'بتسكسك' and ChCheck(msg) then
+if not DevRio:get(Prox..'Rio:Lock:Games'..msg.chat_id_) then
+local ProxTeam = {
+" اول مره سكسكتي امتا🥵",
+" جبتيهم قبل كدا كام مرا ?🥵",
+" لو قربت منك ومسكت بزك هتيجي ?🥵",
+" مين الممثله اللي نفسك تعمل معاها احيه ???",
+" لو جاتلك فرصه تمارسي الجنس المخفف راح توافقي او لا ?🥵",
+"اخر مرهه غفلت حد وعملت معاه الجولاشه امته ?🥵 ",
+" اي اكتر حاجه بتشدك لجسم الجنس الاخر ?🥵",
+" بعتي نودز لكام ولد ?🥵",
+" عمرك سكسكتي مع ولد ?🥵",
+" بتسكسك مع كام بنت ?🥵",
+"قبلتي صديقك قبل كدا ?🥵 ",
+" عمرك مارست الجنس ?🥵",
+" ما رأيك في اللون الاسود حينما ترتديه فتاه بيضاء ?🥵",
+" اخر مره قبلت بنت ?🥵",
+"اخر مره قبلتي ولد ?🥵 ",
+" مشتهي شي ?🥵",
+"اخر مره قمت بزياره المواقع الايباحيه ?🥵 ",
+"بدك تمارسي العاده السريه من الامام ام الخلف ? 🥵",
+"ما المكان المفضل لك في ممارسه الجنس ?🥵 ",
+" متي قمت بممارسه العاده السريه اخر مره ?🥵",
+" ما لون ملابسك الداخليه المفضل ???",
+"ما مقاس البرا التي ترتديها الان ?🥵 ",
+" كم مرا نكت بنت ؟🥵",
+"اخر مرا دخلت الحمام ؟🥵 ",
+"فشخت كام بنت🥵  ",
+" بلغت ولا لا 🥵",
+" عايز تنيك ولا لا 🥵",
+"حابه تفتحي تيزيك🥵  ",
+"اخر مره سكستي امته 🥵 ",
+"حبه تتناكي من مين🥵 ",
+}  
+Dev_Rio(msg.chat_id_, msg.id_, 1, ''..ProxTeam[math.random(#ProxTeam)]..'' , 1, 'md')  
+return false
+end
+end
+
+--     Source DevProx     --
+if text == 'المطور' or text == 'مطور' or text == '↫ المطور ⌔' then
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
+local msg_id = msg.id_/2097152/0.5
+Text = "*⋆ Dev Name ⤌ * ["..result.first_name_.."](T.me/"..result.username_..")\n*⋆ Dev User ⤌* [@"..result.username_.."]"
+keyboard = {}
+keyboard.inline_keyboard = {{{text = ''..result.first_name_..' ',url="t.me/"..result.username_ or F_L_3}}}
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end,nil)
+end
+
 -----------------------------------------------------------------------------
 --     Source Prox     --
 if ChatType == 'sp' or ChatType == 'gp'  then
@@ -8038,7 +8306,7 @@ newpicid = newpicid:gsub('#auto',(formsgs(msguser) or 'لا يوجد'))
 newpicid = newpicid:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
 newpicid = newpicid:gsub('#Description',(Description or 'لا يوجد'))
 else
-newpicid = "᥀︙"..Description.."\n U𝘴ꫀ𝘳 メ〈"..username.."〉\n 𝓲 ᦔ メ〈"..msg.sender_user_id_.."〉\n Rꪖꪀ𝘬 メ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n M𝘴ᧁ メ〈"..user_msgs.."〉\n B𝓲ꪮ メ〈"..getbioY.."〉\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n"
+newpicid = "⌔ ︙"..Description.."\n U𝘴ꫀ𝘳 メ〈"..username.."〉\n 𝓲 ᦔ メ〈"..msg.sender_user_id_.."〉\n Rꪖꪀ𝘬 メ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n M𝘴ᧁ メ〈"..user_msgs.."〉\n B𝓲ꪮ メ〈"..getbioY.."〉\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n"
 end 
 if not DevRio:get(Prox.."Rio:GpIds:Text"..msg.chat_id_) then 
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, rio.photos_[0].sizes_[1].photo_.persistent_id_,newpicid,msg.id_,msg.id_.."")
@@ -12039,17 +12307,72 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/H_I_v_e_e_n101&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source Prox     --
+--     Source keloa     --
 if text == "ماجد" and ChCheck(msg) or text == "هكر القلوب" and ChCheck(msg) or text == "ماقد" and ChCheck(msg) or text == "مبرمج السورس" and ChCheck(msg) or text == "↫ مبرمج السور⌔" and ChCheck(msg) then 
 Text = [[
-⌔  [مبرمج السورس](htts://t.me/K_1_D))
+⌔  [مبرمج السورس](htts://t.me/Y_5_W)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⌔ مبرمج السورس',url="t.me/K_1_D"}},
+{{text = '⌔ مبرمج السورس',url="t.me/Y_5_W"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/K_1_D&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Y_5_W&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+if text == "↫ بوت الهمسه ⌔" and ChCheck(msg) or text == "بوت الهمسه" and ChCheck(msg) or text == " اهمس" and ChCheck(msg) or text == "هات بوت الهمسه" and ChCheck(msg) or text == "عايز همسه" and ChCheck(msg) then 
+Text = [[
+مرحبا بك في بوت لهمسه 
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = ' ⌔ بوت الهمسه ',url="t.me/nnna6bot"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/F_2_L_4/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+if text == "يوتيوب" and ChCheck(msg) or text == "قران" and ChCheck(msg) or text == "تيك توك" and ChCheck(msg) or text == "بحث" and ChCheck(msg) or text == "↫ شامل⌔" and ChCheck(msg) then 
+Text = [[
+⌔ مرحبا عزيزي اليك افضل البوتات الخدميه لتحميل من مواقع السوشيال
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'بوت اليوتيوب ♥️',url="t.me/Qeaa_bot"}},
+{{text = 'بوت تيك توك 🇦🇪',url="t.me/K0XBOT"}},
+{{text = 'بوت انستقرام 🎌',url="t.me/J33Bot"}},
+{{text = 'بوت قران 🕌',url="t.me/quran_lbot"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/OO_PCV/11&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+if text == "تواصل" and ChCheck(msg) or text == "المطورين" and ChCheck(msg) or text == "مبرمجين السورس" and ChCheck(msg) or text == "اصحاب السورس" and ChCheck(msg) or text == "↫ شامل⌔" and ChCheck(msg) then 
+Text = [[
+⌔ مرحبا عزيزي قم بالضغط علي الازار في الاسفل وتواصل مع مطورين سورس كيلوا
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⌯ ᴛᴀᴡᴀѕᴏʟ ᴋᴇʟᴏᴀ ⌯',url="t.me/User_Laren"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/OO_PCV/12&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+if text == "بوت الحذف" and ChCheck(msg) or text == "رابط الحذف" and ChCheck(msg) or text == "حذف حسابي" and ChCheck(msg) or text == "هات بوت الحذف" and ChCheck(msg) or text == "هحذف" and ChCheck(msg) then 
+Text = [[
+رابط حذف جميع موقع التواصل 
+احذف عشان انته مخنوق انا حاسس بيك 😢??
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'Telegram',url="https://my.telegram.org/auth?to=delete"},{text = 'BOT Telegram', url="t.me/LC6BOT"}},  
+{{text = 'instagram', url="https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/"}},  
+{{text = 'Facebook', url="https://www.facebook.com/help/deleteaccount"}},  
+{{text = 'Snspchat', url="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount"}},  
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/FlassTas8080/51&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 --     Source Prox     --
