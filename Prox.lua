@@ -6759,7 +6759,7 @@ end
 resolve_username(rem[2],remm)
 end
 --     Source Prox     --
-if SourceCh(msg) and text == '/HHH' then
+if text ==('/HHH') and ChCheck(msg) then
 local Teext =[[
 W𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒔𝒖𝒓𝒔𝒆 𝒔𝒊𝒓𝒊𝒂 ⧫ ??⇣
 ]]
