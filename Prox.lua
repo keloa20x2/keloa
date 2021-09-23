@@ -9301,7 +9301,7 @@ newpicid = newpicid:gsub('#auto',(formsgs(msguser) or 'لا يوجد'))
 newpicid = newpicid:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
 newpicid = newpicid:gsub('#Description',(Description or 'لا يوجد'))
 else
-newpicid = ""..Description.."\n U𝘴ꫀ𝘳 メ〈"..username.."〉\n 𝓲 ᦔ メ〈"..msg.sender_user_id_.."〉\n Rꪖꪀ𝘬 メ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n M𝘴ᧁ メ〈"..user_msgs.."〉\n B𝓲ꪮ メ〈"..GetBio.."〉\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n"
+newpicid = ""..Description.."\n U𝘴ꫀ𝘳 メ〈"..username.."〉\n 𝓲 ᦔ メ〈"..msg.sender_user_id_.."〉\n Rꪖꪀ𝘬 メ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n M𝘴ᧁ メ〈"..user_msgs.."〉\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n"
 end 
 if not DevRio:get(Prox.."Rio:GpIds:Text"..msg.chat_id_) then 
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, rio.photos_[0].sizes_[1].photo_.persistent_id_,newpicid,msg.id_,msg.id_.."")
@@ -9339,7 +9339,7 @@ newallid = newallid:gsub('#auto',(formsgs(msguser) or 'لا يوجد'))
 newallid = newallid:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
 newallid = newallid:gsub('#Description',(Description or 'لا يوجد'))
 else
-newallid = "◍ U𝘴ꫀ𝘳 メ〈"..username.."〉\n 𝓲 ᦔ メ〈"..msg.sender_user_id_.."〉\n Rꪖꪀ𝘬 メ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n M𝘴ᧁ メ〈"..user_msgs.."〉\n B𝓲ꪮ メ〈"..GetBio.."〉"
+newallid = "◍ U𝘴ꫀ𝘳 メ〈"..username.."〉\n 𝓲 ᦔ メ〈"..msg.sender_user_id_.."〉\n Rꪖꪀ𝘬 メ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n M𝘴ᧁ メ〈"..user_msgs.."〉"
 end 
 if not DevRio:get(Prox.."Rio:GpIds:Text"..msg.chat_id_) then
 Dev_Rio(msg.chat_id_, msg.id_, 1, newallid, 1, 'html')
