@@ -8788,120 +8788,6 @@ end
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),ThwelByReply) 
 end
 end
-
-if text == 'تفعيل انا مين'  then
-if Constructor(msg) then  
-DevRio:set(Rio.."my_anamen:status"..msg.chat_id_,true) 
-send(msg.chat_id_, msg.id_," ◍تـم تـفعـيل انا مين") 
-return false  
-end
-end
-
-text == 'تعطيل انا مين'  then
-if Constructor(msg) then  
-DevRio:del(Rio.."my_anamen:status"..msg.chat_id_) 
-send(msg.chat_id_, msg.id_," ◍ تـم تـعـطـيل انا مين") 
-return false end
-end
-if text == 'انا مين' and SudoBot(msg) then 
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت مطوري يقلبي 🌚❤️](t.me/F_L_3)')
-return false
-end
-
-if text == 'انا مين' and DevSoFi(msg) then 
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت مطوري الثاني حته مني 😍💚](t.me/F_L_3)')
-return false
-end
-
-if text == 'انا مين' and Sudo(msg) then 
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت المطور بس الصغنن 🌝💘](t.me/F_L_3)')
-return false
-end
-
-if text == 'انا مين' and CoSu(msg) then 
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-DevRio(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-DevRio(msg.chat_id_,msg.id_, '[نت المالك هن يعني حاجه فوق فوف راسي 😂♥](t.me/F_L_3)')
-return false
-end
-
-if text == 'انا مين' and Constructor(msg) then 
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-DevRio(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-DevRio(msg.chat_id_,msg.id_, '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه😹🤦‍♂️](t.me/F_L_3)')
-return false
-end
-
-if text == 'انا مين' and BasicConstructor(msg) then 
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-DevRio(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-DevRio(msg.chat_id_,msg.id_, '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂🎯](t.me/F_L_3)')
-return false
-end
-
-if text == 'انا مين' and Manager(msg) then 
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-DevRio(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-DevRio(msg.chat_id_,msg.id_, '[ انت المدير يعني الروم تحت سيطرتك😹](t.me/F_L_3)')
-return false
-end
-
-if text == 'انا مين' and Mod(msg) then
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-DevRio(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-DevRio(msg.chat_id_,msg.id_, '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹 ](t.me/F_L_3)')
-return false
-end
-
-if text == 'انا مين' and Special(msg) then 
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-DevRio(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-DevRio(msg.chat_id_,msg.id_, '[ انت مميز ابن ناس 😊 ](t.me/F_L_3)')
-return false
-end
-
-if text == 'انا مين' then
-local my_ph = DevRio:get(Rio.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-DevRio(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-DevRio(msg.chat_id_,msg.id_, '[انت مجرد عضو زليل حقير ملوش لزمه 😂](t.me/F_L_3)')
-return false
-end
 --     Source Prox     --
 if text ==("كشف") and msg.reply_to_message_id_ ~= 0 and ChCheck(msg) or text ==("ايدي") and msg.reply_to_message_id_ ~= 0 and ChCheck(msg) then 
 function id_by_reply(extra, result, success) 
@@ -9175,7 +9061,7 @@ local List = {
 • 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
 • 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂️ ☥
 • 🖤 | 𝑰𝑫 : #id ‌‌‏♕
-• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
+• 🖤 | 𝑴𝑺?? : #msgs 𓆊
 ]],
 [[
 ┌ 𝐔𝐒𝐄𝐑 𖤱 #username 𖦴 .
