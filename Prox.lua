@@ -8789,7 +8789,7 @@ getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),ThwelByReply)
 end
 end
 
-if text == "تفعيل انا مين"  then
+if text == 'تفعيل انا مين'  then
 if Constructor(msg) then  
 DevRio:set(Rio.."my_anamen:status"..msg.chat_id_,true) 
 send(msg.chat_id_, msg.id_," ◍تـم تـفعـيل انا مين") 
@@ -8797,7 +8797,7 @@ return false
 end
 end
 
-text == "تعطيل انا مين"  then
+text == 'تعطيل انا مين'  then
 if Constructor(msg) then  
 DevRio:del(Rio.."my_anamen:status"..msg.chat_id_) 
 send(msg.chat_id_, msg.id_," ◍ تـم تـعـطـيل انا مين") 
