@@ -5832,7 +5832,7 @@ send(msg.chat_id_, msg.reply_to_message_id_, 'مات 😂')
 send(msg.chat_id_, msg.reply_to_message_id_, 'بفتث 😂')
 send(msg.chat_id_, msg.id_, 'امسح بقي عشان ميحصلش حاجه للروم من الشتايم 😚')
 return false 
-end,nil)
+end
 end
 
 if text == 'نكت' and ChCheck(msg) or text == 'نكته' and ChCheck(msg) or text == 'ضحكني' and ChCheck(msg) or text == '↫ ضحكه⌔' and ChCheck(msg) then
