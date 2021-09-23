@@ -2859,19 +2859,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local mrrio = DevRio:get(Prox.."Comd:New:rt:Rio:"..DEV_RIO..msg.chat_id_)
 if mrrio == "مميز" and VipMem(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' ❩\n⌔  تم رفعه ❨ '..DEV_RIO..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' 〉\n⌔  تم رفعه 〈 '..DEV_RIO..' 〉 بنجاح', 1, 'md')
 DevRio:set(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_RIO) 
 DevRio:sadd(Prox..'Rio:VipMem:'..msg.chat_id_, result.sender_user_id_)
 elseif mrrio == "ادمن" and Admin(msg) then 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' ❩\n⌔  تم رفعه ❨ '..DEV_RIO..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' 〉\n⌔  تم رفعه 〈 '..DEV_RIO..' 〉 بنجاح', 1, 'md')
 DevRio:set(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_RIO)
 DevRio:sadd(Prox..'Rio:Admins:'..msg.chat_id_, result.sender_user_id_)
 elseif mrrio == "مدير" and Manager(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' ❩\n⌔  تم رفعه ❨ '..DEV_RIO..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' 〉\n⌔  تم رفعه 〈 '..DEV_RIO..' 〉 بنجاح', 1, 'md')
 DevRio:set(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_RIO)  
 DevRio:sadd(Prox..'Rio:Managers:'..msg.chat_id_, result.sender_user_id_)
 elseif mrrio == "عضو" then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' ❩\n⌔  تم رفعه ❨ '..DEV_RIO..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' 〉\n⌔  تم رفعه 〈 '..DEV_RIO..' 〉 بنجاح', 1, 'md')
 end
 end,nil)   
 end   
@@ -2885,19 +2885,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local mrrio = DevRio:get(Prox.."Comd:New:rt:Rio:"..DEV_RIO..msg.chat_id_)
 if mrrio == "مميز" and VipMem(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' ❩\n⌔  تم تنزيله ❨ '..DEV_RIO..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' 〉\n⌔  تم تنزيله 〈 '..DEV_RIO..' 〉 بنجاح', 1, 'md')
 DevRio:srem(Prox..'Rio:VipMem:'..msg.chat_id_, result.sender_user_id_)
 DevRio:del(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrrio == "ادمن" and Admin(msg) then 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' ❩\n⌔  تم تنزيله ❨ '..DEV_RIO..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' 〉\n⌔  تم تنزيله 〈 '..DEV_RIO..' 〉 بنجاح', 1, 'md')
 DevRio:srem(Prox..'Rio:Admins:'..msg.chat_id_, result.sender_user_id_)
 DevRio:del(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrrio == "مدير" and Manager(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' ❩\n⌔  تم تنزيله ❨ '..DEV_RIO..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' 〉\n⌔  تم تنزيله 〈 '..DEV_RIO..' 〉 بنجاح', 1, 'md')
 DevRio:srem(Prox..'Rio:Managers:'..msg.chat_id_, result.sender_user_id_)
 DevRio:del(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrrio == "عضو" then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' ❩\n⌔  تم تنزيله ❨ '..DEV_RIO..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..data.first_name_..'](t.me/'..(data.username_ or 'F_L_3')..')'..' 〉\n⌔  تم تنزيله 〈 '..DEV_RIO..' 〉 بنجاح', 1, 'md')
 end
 end,nil)   
 end   
@@ -2911,19 +2911,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local mrrio = DevRio:get(Prox.."Comd:New:rt:Rio:"..text1[2]..msg.chat_id_)
 if mrrio == "مميز" and VipMem(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' ❩\n⌔  تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' 〉\n⌔  تم رفعه 〈 '..text1[2]..' 〉 بنجاح', 1, 'md')
 DevRio:sadd(Prox..'Rio:VipMem:'..msg.chat_id_, result.id_)
 DevRio:set(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrrio == "ادمن" and Admin(msg) then 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' ❩\n⌔  تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' 〉\n⌔  تم رفعه 〈 '..text1[2]..' 〉 بنجاح', 1, 'md')
 DevRio:sadd(Prox..'Rio:Admins:'..msg.chat_id_, result.id_)
 DevRio:set(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrrio == "مدير" and Manager(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' ❩\n⌔  تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' 〉\n⌔  تم رفعه 〈 '..text1[2]..' 〉 بنجاح', 1, 'md')
 DevRio:sadd(Prox..'Rio:Managers:'..msg.chat_id_, result.id_)
 DevRio:set(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrrio == "عضو" then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' ❩\n⌔  تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' 〉\n⌔  تم رفعه 〈 '..text1[2]..' 〉 بنجاح', 1, 'md')
 end
 else
 Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  *المعرف غير صحيح*", 1, 'md')
@@ -2939,19 +2939,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local mrrio = DevRio:get(Prox.."Comd:New:rt:Rio:"..text1[2]..msg.chat_id_)
 if mrrio == "مميز" and VipMem(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' ❩\n⌔  تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' 〉\n⌔  تم تنزيله 〈 '..text1[2]..' 〉 بنجاح', 1, 'md')
 DevRio:srem(Prox..'Rio:VipMem:'..msg.chat_id_, result.id_)
 DevRio:del(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrrio == "ادمن" and Admin(msg) then 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' ❩\n⌔  تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' 〉\n⌔  تم تنزيله 〈 '..text1[2]..' 〉 بنجاح', 1, 'md')
 DevRio:srem(Prox..'Rio:Admins:'..msg.chat_id_, result.id_)
 DevRio:del(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrrio == "مدير" and Manager(msg) then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' ❩\n⌔  تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' 〉\n⌔  تم تنزيله 〈 '..text1[2]..' 〉 بنجاح', 1, 'md')
 DevRio:srem(Prox..'Rio:Managers:'..msg.chat_id_, result.id_)
 DevRio:del(Prox.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrrio == "عضو" then
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' ❩\n⌔  تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  العضو ↫ 〈 ['..result.title_..'](t.me/'..(text1[3] or 'F_L_3')..')'..' 〉\n⌔  تم تنزيله 〈 '..text1[2]..' 〉 بنجاح', 1, 'md')
 end
 else
 Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  *المعرف غير صحيح*", 1, 'md')
@@ -3335,7 +3335,7 @@ if text == "يوتيوب" and ChCheck(msg) or text == "اليوتيوب" and ChC
 if text == "اهمس" and ChCheck(msg) or text == "↫ بوت الهمسه ⌔" and ChCheck(msg) or text == "بوت الهمسه" and ChCheck(msg) or text == "همسه" and ChCheck(msg) or text == "اريد بوت الهمسه" and ChCheck(msg) or text == "دزلي بوت الهمسه" and ChCheck(msg) or text == "دزولي بوت الهمسه" and ChCheck(msg) then  Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  @HMSEBOT\n⌔  @nnbbot\n⌔  @ocBot\n⌔  @hebot ', 1, 'md') end
 if text == "↫ بوت الكت ⌔" and ChCheck(msg) or text == "بوت الكت" and ChCheck(msg) or text == "بوت كت" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/E9OBot"}}} SendInline(msg.chat_id_,'*⌔  اضغط للحصول على بوت الكت*',nil,inline) return false end
 if text == "↫ بوت الزخرفه ⌔" and ChCheck(msg) or text == "بوت الزخرفه" and ChCheck(msg) or text == "بوت زخرفه" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/W5555Bot"}}} SendInline(msg.chat_id_,'*⌔  اضغط للحصول على بوت الزخرفه*',nil,inline) return false end
-if text == "ايديي" and ChCheck(msg) or text == "↫ ايديي ⌔" and ChCheck(msg) then Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  ايديك ↫ ❨ `'..msg.sender_user_id_..'` ❩', 1, 'md') end
+if text == "ايديي" and ChCheck(msg) or text == "↫ ايديي ⌔" and ChCheck(msg) then Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  ايديك ↫ 〈 `'..msg.sender_user_id_..'` 〉', 1, 'md') end
 -- Source Prox --
 if text == 'نبذا' and ChCheck(msg) or text == '↫ نبذا ⌔' then
 local ProxTeam = {'- ݪيَالِـʊ̤ʅ المَحبَھۃ مَآ ؏ـَإادَٺ︎ مِـטּ ݪيآلِينآ ، 🖤🏹.! .','‏من مبدأ إكرام الذات، لا حنين لمن لا يحن ..','لقد أذاني شخصاً أحببتهُ من كل قلبي .','٫ الصمت والتغاضي عن حماقاتكم كبرياء وليس غباء كما ظننتمll.🍂','. لآا تَـٰأتـي ، ۉꪆ لَـن أ؏ـꪆد ، ۉꪆ لَـن نَلـتـٰقـي ، 🖤 .! . .',':لا نهايات للحب ، الحب الذي ينتهي لم يكن حباً . .','-لسنا لأحد .. إنا للّٰه وإليه راجعون.". 🖤'}  
@@ -3346,7 +3346,7 @@ end
 --     Source Prox     --
 if text == "معرفي" and ChCheck(msg) or text == "↫  معرفي ⌔" and ChCheck(msg) then
 function get_username(extra,result,success)
-text = '⌔  معرفك ↫ ❨ User ❩'
+text = '⌔  معرفك ↫ 〈 User 〉'
 local text = text:gsub('User',('@'..result.username_ or ''))
 Dev_Rio(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
@@ -3496,7 +3496,7 @@ local NameChat = NameChat:gsub("*","")
 local NameChat = NameChat:gsub("{","") 
 local NameChat = NameChat:gsub("}","") 
 if not Sudo(msg) and not Bot(msg) then
-SendText(DevId,"⌔  تم طرد البوت من المجموعه ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  بواسطة ↫ "..Name.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"⌔  تم طرد البوت من المجموعه ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  بواسطة ↫ "..Name.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  ايدي المجموعه ↫ ⤈ \n〈 `"..msg.chat_id_.."` 〉\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end,nil)
 end,nil)
@@ -3597,7 +3597,7 @@ else
 LinkGroup = 'لا يوجد'
 end
 DevRio:set(Prox.."Rio:Groups:Links"..msg.chat_id_,LinkGroup) 
-SendText(DevId,"⌔  تم تفعيل مجموعه جديده ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  بواسطة ↫ "..Name.."\n⌔  موقعه في المجموعه ↫ "..status.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n⌔  ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n⌔  رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"⌔  تم تفعيل مجموعه جديده ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  بواسطة ↫ "..Name.."\n⌔  موقعه في المجموعه ↫ "..status.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  عدد اعضاء المجموعه ↫ 〈 *"..NumMem.."* 〉\n⌔  ايدي المجموعه ↫ ⤈ \n〈 `"..msg.chat_id_.."` 〉\n⌔  رابط المجموعه ↫ ⤈\n〈 ["..LinkGroup.."] 〉\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end end
 end,nil)
@@ -5635,7 +5635,7 @@ local cont = (tonumber(DevRio:get(Prox..'Rio:ContactNumber'..msg.chat_id_..':'..
 local user_nkt = tonumber(DevRio:get(Prox..'Rio:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)
 if result.username_ then username = '@'..result.username_ else username = 'لا يوجد' end
 if result.last_name_ then lastname = result.last_name_ else lastname = '' end
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  اسمك ↫ ❨ ['..result.first_name_..'] ❩\n⌔  معرفك ↫ ❨ ['..username..'] ❩\n⌔  ايديك ↫ ❨ `'..result.id_..'` ❩\n⌔  نقاطك ↫ ❨ '..user_nkt..' ❩\n⌔  رسائلك ↫ ❨ '..user_msgs..' ❩\n⌔  جهاتك ↫ ❨ '..cont..' ❩\n⌔  تفاعلك ↫ '..formsgs(msguser)..'\n⌔  رتبتك ↫ '..IdRank(msg.sender_user_id_, msg.chat_id_), 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  اسمك ↫ 〈 ['..result.first_name_..'] 〉\n⌔  معرفك ↫ 〈 ['..username..'] 〉\n⌔  ايديك ↫ 〈 `'..result.id_..'` 〉\n⌔  نقاطك ↫ 〈 '..user_nkt..' 〉\n⌔  رسائلك ↫ 〈 '..user_msgs..' 〉\n⌔  جهاتك ↫ 〈 '..cont..' 〉\n⌔  تفاعلك ↫ '..formsgs(msguser)..'\n⌔  رتبتك ↫ '..IdRank(msg.sender_user_id_, msg.chat_id_), 1, 'md')
 end
 getUser(msg.sender_user_id_,get_me)
 end
@@ -5710,7 +5710,7 @@ local PvList = DevRio:smembers(Prox.."Rio:Users")
 for k,v in pairs(PvList) do
 tdcli_function({ID="ForwardMessages", chat_id_ = v, from_chat_id_ = msg.chat_id_, message_ids_ = {[0] = result.id_}, disable_notification_ = 0, from_background_ = 1},function(a,t) end,nil) 
 end
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  تم اذاعة رسالتك بالتوجيه \n⌔  ‏في ↫ ❨ '..#GpList..' ❩ مجموعه \n⌔  والى ↫ ❨ '..#PvList..' ❩ مشترك \n ✓', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  تم اذاعة رسالتك بالتوجيه \n⌔  ‏في ↫ 〈 '..#GpList..' 〉 مجموعه \n⌔  والى ↫ 〈 '..#PvList..' 〉 مشترك \n ✓', 1, 'md')
 end
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),ProxTeam)
 end
@@ -6395,7 +6395,7 @@ end
 --     Source Prox     --
 if text == "رسائلي" and msg.reply_to_message_id_ == 0 and ChCheck(msg) then
 local user_msgs = DevRio:get(Prox..'Rio:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  عدد رسائلك هنا ↫ *❨ "..user_msgs.." ❩*", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  عدد رسائلك هنا ↫ *〈 "..user_msgs.." 〉*", 1, 'md')
 end
 if text == "التفاعل" and ChCheck(msg) then
 local EntryNumber = (DevRio:get(Prox..'Rio:EntryNumber'..msg.chat_id_..':'..os.date('%d')) or 0)
@@ -6435,8 +6435,8 @@ end
 end
 end
 --     Source Prox     --
-if text == "جهاتي" and ChCheck(msg) or text == "اضافاتي" and ChCheck(msg) then add = (tonumber(DevRio:get(Prox..'Rio:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_)) or 0) Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  عدد جهاتك المضافه ↫ *❨ "..add.." ❩* ", 1, 'md') end
-if text == "تعديلاتي" or text == "سحكاتي" and ChCheck(msg) then local edit_msg = DevRio:get(Prox..'Rio:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0  Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  عدد تعديلاتك ↫ *❨ "..edit_msg.." ❩* ", 1, 'md') end
+if text == "جهاتي" and ChCheck(msg) or text == "اضافاتي" and ChCheck(msg) then add = (tonumber(DevRio:get(Prox..'Rio:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_)) or 0) Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  عدد جهاتك المضافه ↫ *〈 "..add.." 〉* ", 1, 'md') end
+if text == "تعديلاتي" or text == "سحكاتي" and ChCheck(msg) then local edit_msg = DevRio:get(Prox..'Rio:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0  Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  عدد تعديلاتك ↫ *〈 "..edit_msg.." 〉* ", 1, 'md') end
 if text == "رتبتي" and ChCheck(msg) then Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  رتبتك ↫ '..IdRank(msg.sender_user_id_, msg.chat_id_), 1, 'html') end
 if text == "ايدي المجموعه" and ChCheck(msg) then Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  ايدي المجموعه ↫ `"..msg.chat_id_.."`", 1, 'md') end
 if text == 'مسح سحكاتي' or text == 'مسح تعديلاتي' or text == 'حذف سحكاتي' or text == 'حذف تعديلاتي' then DevRio:del(Prox..'Rio:EditMsg'..msg.chat_id_..msg.sender_user_id_) Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  تم حذف جميع تعديلاتك بنجاح' , 1, 'md') end
@@ -8657,7 +8657,7 @@ if text == "قائمه المنع" and ChCheck(msg) then
 local List = DevRio:hkeys(Prox..'Rio:Filters:'..msg.chat_id_)
 text = "⌔  قائمة المنع ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n"
 for k, v in pairs(List) do
-text = text..k..'~ ❨ '..v..' ❩\n'
+text = text..k..'~ 〈 '..v..' 〉\n'
 end
 if #List == 0 then
 text = "⌔  لا توجد كلمات ممنوعه"
@@ -8917,10 +8917,10 @@ if data.first_name_ == false then
 Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  الحساب محذوف', 1, 'md')
 return false  end
 if data.username_ == false then
-Text = '⌔  اسمه ↫ ['..data.first_name_..'](tg://user?id='..result.sender_user_id_..')\n⌔  ايديه ↫ ❨ `'..result.sender_user_id_..'` ❩\n⌔  رتبته ↫ '..IdRank(result.sender_user_id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ ❨ '..user_msgs..' ❩\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ ❨ '..user_nkt..' ❩'..Tked
+Text = '⌔  اسمه ↫ ['..data.first_name_..'](tg://user?id='..result.sender_user_id_..')\n⌔  ايديه ↫ 〈 `'..result.sender_user_id_..'` 〉\n⌔  رتبته ↫ '..IdRank(result.sender_user_id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ 〈 '..user_msgs..' 〉\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ 〈 '..user_nkt..' 〉'..Tked
 SendText(msg.chat_id_,Text,msg.id_/2097152/0.5,'md')
 else
-Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  معرفه ↫ [@'..data.username_..']\n⌔  ايديه ↫ ❨ `'..result.sender_user_id_..'` ❩\n⌔  رتبته ↫ '..IdRank(result.sender_user_id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ ❨ '..user_msgs..' ❩\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ ❨ '..user_nkt..' ❩'..Tked, 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  معرفه ↫ [@'..data.username_..']\n⌔  ايديه ↫ 〈 `'..result.sender_user_id_..'` 〉\n⌔  رتبته ↫ '..IdRank(result.sender_user_id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ 〈 '..user_msgs..' 〉\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ 〈 '..user_nkt..' 〉'..Tked, 1, 'md')
 end
 end,nil)
 end 
@@ -8935,11 +8935,11 @@ return false  end
 if res.type_.ID == "ChannelChatInfo" then 
 if res.type_.channel_.is_supergroup_ == false then
 local ch = 'قناة'
-local chn = '⌔  نوع الحساب ↫ ❨ '..ch..' ❩\n⌔  الايدي ↫ ❨ `'..res.id_..'` ❩\n⌔  المعرف ↫ ❨ [@'..username..'] ❩\n⌔  الاسم ↫ ❨ ['..res.title_..'] ❩'
+local chn = '⌔  نوع الحساب ↫ 〈 '..ch..' 〉\n⌔  الايدي ↫ 〈 `'..res.id_..'` 〉\n⌔  المعرف ↫ 〈 [@'..username..'] 〉\n⌔  الاسم ↫ 〈 ['..res.title_..'] 〉'
 Dev_Rio(msg.chat_id_, msg.id_, 1,chn, 1, 'md')
 else
 local gr = 'مجموعه'
-local grr = '⌔  نوع الحساب ↫ ❨ '..gr..' ❩\n⌔  الايدي ↫ ❨ '..res.id_..' ❩\n⌔  المعرف ↫ ❨ [@'..username..'] ❩\n⌔  الاسم ↫ ❨ ['..res.title_..'] ❩'
+local grr = '⌔  نوع الحساب ↫ 〈 '..gr..' 〉\n⌔  الايدي ↫ 〈 '..res.id_..' 〉\n⌔  المعرف ↫ 〈 [@'..username..'] 〉\n⌔  الاسم ↫ 〈 ['..res.title_..'] 〉'
 Dev_Rio(msg.chat_id_, msg.id_, 1,grr, 1, 'md')
 end
 return false  end
@@ -8978,7 +8978,7 @@ end
 if data.first_name_ == false then
 Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  الحساب محذوف', 1, 'md')
 return false  end
-Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  معرفه ↫ [@'..data.username_..']\n⌔  ايديه ↫ ❨ `'..res.id_..'` ❩\n⌔  رتبته ↫ '..IdRank(res.id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ ❨ '..user_msgs..' ❩\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ ❨ '..user_nkt..' ❩'..Tked, 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  معرفه ↫ [@'..data.username_..']\n⌔  ايديه ↫ 〈 `'..res.id_..'` 〉\n⌔  رتبته ↫ '..IdRank(res.id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ 〈 '..user_msgs..' 〉\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ 〈 '..user_nkt..' 〉'..Tked, 1, 'md')
 end,nil)
 end 
 end,nil)
@@ -9025,10 +9025,10 @@ if data.first_name_ == false then
 Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  الحساب محذوف', 1, 'md')
 return false  end
 if data.username_ == false then
-Text = '⌔  اسمه ↫ ['..data.first_name_..'](tg://user?id='..iduser..')\n⌔  ايديه ↫ ❨ `'..iduser..'` ❩\n⌔  رتبته ↫ '..IdRank(data.id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ ❨ '..user_msgs..' ❩\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ ❨ '..user_nkt..' ❩'..Tked
+Text = '⌔  اسمه ↫ ['..data.first_name_..'](tg://user?id='..iduser..')\n⌔  ايديه ↫ 〈 `'..iduser..'` 〉\n⌔  رتبته ↫ '..IdRank(data.id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ 〈 '..user_msgs..' 〉\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ 〈 '..user_nkt..' 〉'..Tked
 SendText(msg.chat_id_,Text,msg.id_/2097152/0.5,'md')
 else
-Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  معرفه ↫ [@'..data.username_..']\n⌔  ايديه ↫ ❨ `'..iduser..'` ❩\n⌔  رتبته ↫ '..IdRank(data.id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ ❨ '..user_msgs..' ❩\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ ❨ '..user_nkt..' ❩'..Tked, 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1,'⌔  معرفه ↫ [@'..data.username_..']\n⌔  ايديه ↫ 〈 `'..iduser..'` 〉\n⌔  رتبته ↫ '..IdRank(data.id_, msg.chat_id_)..sudobot..'\n⌔  رسائله ↫ 〈 '..user_msgs..' 〉\n⌔  تفاعله ↫ '..formsgs(user_msgs)..CustomTitle..'\n⌔  نقاطه ↫ 〈 '..user_nkt..' 〉'..Tked, 1, 'md')
 end
 end,nil)
 return false 
@@ -9387,7 +9387,7 @@ if not DevRio:get(Prox..'Rio:Lock:Id'..msg.chat_id_) then
 if not DevRio:get(Prox..'Rio:Lock:Id:Photo'..msg.chat_id_) then
 Dev_Rio(msg.chat_id_, msg.id_, 1, notpicid, 1, 'html')
 else
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔︙معرفك ↫ ❨ "..username.." ❩\n⌔︙ايديك ↫ ❨ "..msg.sender_user_id_.." ❩\n⌔︙رتبتك ↫ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n⌔︙رسائلك ↫ ❨ "..user_msgs.." ❩\n⌔︙سحكاتك ↫ ❨ "..edit_msg.." ❩\n⌔︙رسائلك ↫ ❨ "..user_msgs.." ❩\n⌔︙تفاعلك ↫ "..formsgs(msguser).."\n⌔︙نقاطك ↫ ❨ "..user_nkt.." ❩", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, " U𝘴ꫀ𝘳 メ〈"..username.."〉\n 𝓲 ᦔ メ〈"..msg.sender_user_id_.."〉\n Rꪖꪀ𝘬 メ "..IdRank(msg.sender_user_id_, msg.chat_id_).."\n M𝘴ᧁ メ〈"..user_msgs.."〉\n B𝓲ꪮ メ〈"..getbioY.."〉", 1, 'md')
 end
 else
 Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔︙عذرا الايدي معطل', 1, 'md')
@@ -9670,15 +9670,15 @@ end
 if SudoBot(msg) then
 if text and text == "الاحصائيات" and ChCheck(msg) or text and text == "↫  الاحصائيات ⌔" and ChCheck(msg) then
 local gps = DevRio:scard(Prox.."Rio:Groups") local users = DevRio:scard(Prox.."Rio:Users") 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  احصائيات البوت ↫ ⤈\n⌔  عدد المشتركين ↫ ❨ '..users..' ❩\n⌔  عدد المجموعات ↫ ❨ '..gps..' ❩', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  احصائيات البوت ↫ ⤈\n⌔  عدد المشتركين ↫ 〈 '..users..' 〉\n⌔  عدد المجموعات ↫ 〈 '..gps..' 〉', 1, 'md')
 end
 if text and text == "المشتركين" and ChCheck(msg) or text and text == "↫ المشتركين ⌔" and ChCheck(msg) then
 local users = DevRio:scard(Prox.."Rio:Users")
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  عدد المشتركين ↫ ❨ '..users..' ❩', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  عدد المشتركين ↫ 〈 '..users..' 〉', 1, 'md')
 end
 if text and text == "المجموعات" and ChCheck(msg) or text and text == "↫ المجموعات ⌔" and ChCheck(msg) then
 local gps = DevRio:scard(Prox.."Rio:Groups")
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  عدد المجموعات ↫ ❨ '..gps..' ❩', 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  عدد المجموعات ↫ 〈 '..gps..' 〉', 1, 'md')
 end
 end
 --     Source Prox     --
@@ -10661,7 +10661,7 @@ if not BasicConstructor(msg) then
 Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  للمنشئ الاساسي فقط', 1, 'md')
 else
 DevRio:del(Prox..'Rio:Ban:'..msg.chat_id_) DevRio:del(Prox..'Rio:Admins:'..msg.chat_id_) DevRio:del(Prox..'User:Donky:'..msg.chat_id_) DevRio:del(Prox..'Rio:VipMem:'..msg.chat_id_) DevRio:del(Prox..'Rio:Filters:'..msg.chat_id_) DevRio:del(Prox..'Rio:Muted:'..msg.chat_id_)
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم حذف ↫ ❨ قائمة المنع • المحظورين • المكتومين • الادمنيه • المميزين • المطايه ❩ بنجاح \n ✓", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم حذف ↫ 〈 قائمة المنع • المحظورين • المكتومين • الادمنيه • المميزين • المطايه 〉 بنجاح \n ✓", 1, 'md')
 end end
 --     Source Prox     --
 if text and text:match("^حذف جميع الرتب$") and ChCheck(msg) or text and text:match("^مسح جميع الرتب$") and ChCheck(msg) or text and text:match("^تنزيل جميع الرتب$") and ChCheck(msg) then
@@ -10687,7 +10687,7 @@ DevRio:del(Prox..'Rio:Managers:'..msg.chat_id_)
 DevRio:del(Prox..'Rio:Admins:'..msg.chat_id_)
 DevRio:del(Prox..'Rio:VipMem:'..msg.chat_id_)
 DevRio:del(Prox..'User:Donky:'..msg.chat_id_)
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم حذف جميع الرتب التاليه ↫ ❨ "..basicconstructort..constructort..Managerst..adminst..vipmemt..donkyt.." ❩ بنجاح \n ✓", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم حذف جميع الرتب التاليه ↫ 〈 "..basicconstructort..constructort..Managerst..adminst..vipmemt..donkyt.." 〉 بنجاح \n ✓", 1, 'md')
 else
 Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  لاتوجد رتب هنا", 1, 'md')
 end 
@@ -11538,7 +11538,7 @@ if text and text:match("^معلومات المجموعه$") and ChCheck(msg) or 
 local Muted = DevRio:scard(Prox.."Rio:Muted:"..msg.chat_id_) or "0"
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 tdcli_function({ID="GetChannelFull",channel_id_ = msg.chat_id_:gsub("-100","")},function(arg,data) 
-Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  المجموعه ↫ ❨ '..dp.title_..' ❩\n⌔  الايدي ↫ ❨ '..msg.chat_id_..' ❩\n⌔  عدد الاعضاء ↫ ❨ *'..data.member_count_..'* ❩\n⌔  عدد الادمنيه ↫ ❨ *'..data.administrator_count_..'* ❩\n⌔  عدد المطرودين ↫ ❨ *'..data.kicked_count_..'* ❩\n⌔  عدد المكتومين ↫ ❨ *'..Muted..'* ❩\n⌔  عدد رسائل المجموعه ↫ ❨ *'..(msg.id_/2097152/0.5)..'* ❩\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n', 1, 'md') 
+Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔  المجموعه ↫ 〈 '..dp.title_..' 〉\n⌔  الايدي ↫ 〈 '..msg.chat_id_..' 〉\n⌔  عدد الاعضاء ↫ 〈 *'..data.member_count_..'* 〉\n⌔  عدد الادمنيه ↫ 〈 *'..data.administrator_count_..'* 〉\n⌔  عدد المطرودين ↫ 〈 *'..data.kicked_count_..'* 〉\n⌔  عدد المكتومين ↫ 〈 *'..Muted..'* 〉\n⌔  عدد رسائل المجموعه ↫ 〈 *'..(msg.id_/2097152/0.5)..'* 〉\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n', 1, 'md') 
 end,nil)
 end,nil)
 end
@@ -11794,7 +11794,7 @@ LinkGroup = 'لا يوجد'
 end
 DevRio:set(Prox.."Rio:Groups:Links"..msg.chat_id_,LinkGroup) 
 if not Sudo(msg) then
-SendText(DevId,"⌔  تم تفعيل مجموعه جديده ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  بواسطة ↫ "..Name.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  عدد اعضاء المجموعه ↫ ❨ *"..NumMem.."* ❩\n⌔  ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n⌔  رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"⌔  تم تفعيل مجموعه جديده ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  بواسطة ↫ "..Name.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  عدد اعضاء المجموعه ↫ 〈 *"..NumMem.."* 〉\n⌔  ايدي المجموعه ↫ ⤈ \n〈 `"..msg.chat_id_.."` 〉\n⌔  رابط المجموعه ↫ ⤈\n〈 ["..LinkGroup.."] 〉\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -11832,7 +11832,7 @@ LinkGroup = 'لا يوجد'
 end
 DevRio:set(Prox.."Rio:Groups:Links"..msg.chat_id_,LinkGroup) 
 if not Sudo(msg) then
-SendText(DevId,"⌔  تم تعطيل مجموعه جديده ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  بواسطة ↫ "..Name.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n⌔  رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"⌔  تم تعطيل مجموعه جديده ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  بواسطة ↫ "..Name.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  ايدي المجموعه ↫ ⤈ \n〈 `"..msg.chat_id_.."` 〉\n⌔  رابط المجموعه ↫ ⤈\n〈 ["..LinkGroup.."] 〉\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -11861,12 +11861,12 @@ local NameChat = NameChat:gsub("}","")
 local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if LinkGp.ok == true then 
 LinkGroup = LinkGp.result
-LinkGroup = "⌔  رابط المجموعه ↫ ⤈\n❨ ["..LinkGroup.."] ❩"
+LinkGroup = "⌔  رابط المجموعه ↫ ⤈\n〈 ["..LinkGroup.."] 〉"
 else
 LinkGroup = '⌔  ليست لدي صلاحية الدعوه لهذه المجموعه !'
 end
 if not Sudo(msg) then
-SendText(DevId,"⌔  هناك من بحاجه الى مساعده ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الشخص ↫ "..Name.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  ايدي المجموعه ↫ ⤈ \n❨ `"..msg.chat_id_.."` ❩\n"..LinkGroup.."\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"⌔  هناك من بحاجه الى مساعده ↫ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الشخص ↫ "..Name.."\n⌔  اسم المجموعه ↫ ["..NameChat.."]\n⌔  ايدي المجموعه ↫ ⤈ \n〈 `"..msg.chat_id_.."` 〉\n"..LinkGroup.."\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  الوقت ↫ "..os.date("%I:%M%p").."\n⌔  التاريخ ↫ "..os.date("%Y/%m/%d").."",0,'md')
 end
 end,nil)
 end,nil)
@@ -11903,7 +11903,7 @@ send(msg.chat_id_, msg.id_,"⌔  الاذاعه معطله من قبل المط�
 return false
 end
 DevRio:setex(Prox.."Rio:Send:Pv"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local ProxTeam = '⌔  اهلا عزيزي ↫ '..RioRank(msg)..' \n⌔  ارسل لي سواء ↫ ⤈ \n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌔  للخروج ارسل ↫ ( الغاء ) \n ✓'
+local ProxTeam = '⌔  اهلا عزيزي ↫ '..RioRank(msg)..' \n⌔  ارسل لي سواء ↫ ⤈ \n〈 ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله 〉\n⌔  للخروج ارسل ↫ ( الغاء ) \n ✓'
 riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, ProxTeam, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -11960,7 +11960,7 @@ RioText = "الملصق"
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة "..RioText.." بنجاح \n⌔  ‏الى ↫ ❨ "..#List.." ❩ مشترك \n ✓", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة "..RioText.." بنجاح \n⌔  ‏الى ↫ 〈 "..#List.." 〉 مشترك \n ✓", 1, 'md')
 DevRio:del(Prox.."Rio:Send:Pv"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
 --     Source Prox     --
@@ -11970,7 +11970,7 @@ send(msg.chat_id_, msg.id_,"⌔  الاذاعه معطله من قبل المط�
 return false
 end
 DevRio:setex(Prox.."Rio:Send:Gp"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local ProxTeam = '⌔  اهلا عزيزي ↫ '..RioRank(msg)..' \n⌔  ارسل لي سواء ↫ ⤈ \n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌔  للخروج ارسل ↫ ( الغاء ) \n ✓'
+local ProxTeam = '⌔  اهلا عزيزي ↫ '..RioRank(msg)..' \n⌔  ارسل لي سواء ↫ ⤈ \n〈 ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله 〉\n⌔  للخروج ارسل ↫ ( الغاء ) \n ✓'
 riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, ProxTeam, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -12027,7 +12027,7 @@ RioText = "الملصق"
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة "..RioText.." بنجاح \n⌔  ‏في ↫ ❨ "..#List.." ❩ مجموعه \n ✓", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة "..RioText.." بنجاح \n⌔  ‏في ↫ 〈 "..#List.." 〉 مجموعه \n ✓", 1, 'md')
 DevRio:del(Prox.."Rio:Send:Gp"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
 --     Source Prox     --
@@ -12051,7 +12051,7 @@ local List = DevRio:smembers(Prox..'Rio:Groups')
 for k,v in pairs(List) do  
 tdcli_function({ID="ForwardMessages", chat_id_ = v, from_chat_id_ = msg.chat_id_, message_ids_ = {[0] = msg.id_}, disable_notification_ = 0, from_background_ = 1},function(a,t) end,nil) 
 end   
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة رسالتك بالتوجيه \n⌔  ‏في ↫ ❨ "..#List.." ❩ مجموعه \n ✓", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة رسالتك بالتوجيه \n⌔  ‏في ↫ 〈 "..#List.." 〉 مجموعه \n ✓", 1, 'md')
 DevRio:del(Prox.."Rio:Send:FwdGp"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
 --     Source Prox     --
@@ -12075,7 +12075,7 @@ local List = DevRio:smembers(Prox..'Rio:Users')
 for k,v in pairs(List) do  
 tdcli_function({ID="ForwardMessages", chat_id_ = v, from_chat_id_ = msg.chat_id_, message_ids_ = {[0] = msg.id_}, disable_notification_ = 0, from_background_ = 1},function(a,t) end,nil) 
 end   
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة رسالتك بالتوجيه \n⌔  ‏الى ↫ ❨ "..#List.." ❩ مشترك \n ✓", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة رسالتك بالتوجيه \n⌔  ‏الى ↫ 〈 "..#List.." 〉 مشترك \n ✓", 1, 'md')
 DevRio:del(Prox.."Rio:Send:FwdPv"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
 --     Source Prox     --
@@ -12085,7 +12085,7 @@ send(msg.chat_id_, msg.id_,"⌔  الاذاعه معطله من قبل المط�
 return false
 end
 DevRio:setex(Prox.."Rio:Send:Gp:Pin"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local ProxTeam = '⌔  اهلا عزيزي ↫ '..RioRank(msg)..' \n⌔  ارسل لي سواء ↫ ⤈ \n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌔  للخروج ارسل ↫ ( الغاء ) \n ✓'
+local ProxTeam = '⌔  اهلا عزيزي ↫ '..RioRank(msg)..' \n⌔  ارسل لي سواء ↫ ⤈ \n〈 ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله 〉\n⌔  للخروج ارسل ↫ ( الغاء ) \n ✓'
 riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, ProxTeam, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -12150,7 +12150,7 @@ sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)
 DevRio:set(Prox..'Rio:PinnedMsgs'..v,msg.content_.sticker_.sticker_.persistent_id_) 
 end 
 end
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة "..RioText.." بالتثبيت \n⌔  ‏في ↫ ❨ "..#List.." ❩ مجموعه \n ✓", 1, 'md')
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم اذاعة "..RioText.." بالتثبيت \n⌔  ‏في ↫ 〈 "..#List.." 〉 مجموعه \n ✓", 1, 'md')
 DevRio:del(Prox.."Rio:Send:Gp:Pin"..msg.chat_id_..":" .. msg.sender_user_id_) 
 return false
 end
@@ -12244,7 +12244,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم الغاء الامر" ,  1, "md")
 DevRio:del(Prox..'Rio:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 return false
 end
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌔  يمكنك اضافة الى النص ↫ ⤈\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  للخروج ارسل ↫ ( الغاء )\n ✓" ,  1, "md")
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  ارسل لي الرد سواء كان ↫ ⤈\n〈 ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله 〉\n⌔  يمكنك اضافة الى النص ↫ ⤈\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  للخروج ارسل ↫ ( الغاء )\n ✓" ,  1, "md")
 DevRio:set(Prox..'Rio:Add:GpRed'..msg.sender_user_id_..msg.chat_id_,'SaveGpRed')
 DevRio:set(Prox..'Rio:Add:GpText'..msg.sender_user_id_..msg.chat_id_,text)
 DevRio:sadd(Prox..'Rio:Manager:GpRed'..msg.chat_id_,text)
@@ -12275,7 +12275,7 @@ Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  تم الغاء الامر" ,  1, "md")
 DevRio:del(Prox..'Rio:Add:AllRed'..msg.sender_user_id_)
 return false
 end
-Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌔  يمكنك اضافة الى النص ↫ ⤈\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  للخروج ارسل ↫ ( الغاء )\n ✓" ,  1, "md")
+Dev_Rio(msg.chat_id_, msg.id_, 1, "⌔  ارسل لي الرد سواء كان ↫ ⤈\n〈 ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله 〉\n⌔  يمكنك اضافة الى النص ↫ ⤈\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n⌔  للخروج ارسل ↫ ( الغاء )\n ✓" ,  1, "md")
 DevRio:set(Prox.."Rio:Add:AllRed"..msg.sender_user_id_,'SaveAllRed')
 DevRio:set(Prox.."Rio:Add:AllText"..msg.sender_user_id_, text)
 DevRio:sadd(Prox.."Rio:Sudo:AllRed",text)
