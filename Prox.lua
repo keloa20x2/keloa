@@ -5735,6 +5735,7 @@ local Text =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
+{{text = '•ᴍʏ ᴅᴇᴠ♪', callback_data="/units"},{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', callback_data="/theytry"}},   
 {{text = '⌯ 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝗸𝗲𝗹𝗼𝗮 ⌯ ',url="t.me/F_L_3"}},
 {{text = '⌯ 𝗛𝗶𝗮𝘃𝗲𝗲𝗻 ⌯',url="t.me/I_4_J"},{text = '⌯ 𝙢𝙖𝙜𝙞𝙙 ⌯',url="t.me/MAGID_ALI_10"}},
 {{text = '⌯ 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝗩𝗜𝗣 ⌯',url="t.me/source_Laren"}},
@@ -6758,98 +6759,42 @@ end
 resolve_username(rem[2],remm)
 end
 --     Source Prox     --
-if text ==('اضف رتبه') or text ==('رفع رتبه') and ChCheck(msg) then
-function sudo_ght(extra, result, success)
-local Text = "اضغط علي الرتبه التي تريد رفع بها"
+if SourceCh(msg) and text == '/HHH' then
+local Teext =[[
+W𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒔𝒖𝒓𝒔𝒆 𝒔𝒊𝒓𝒊𝒂 ⧫ ??⇣
+]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'مطور ثانوي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/SecondSudo"},{text = 'مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Sudo"},
-},
-{
-{text = 'منشئ اساسي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/BasicConstructor"},{text = 'منشئ', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Constructor"},
-},
-{
-{text = 'مدير', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Manager"},{text = 'ادمن', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/Admin"},
-},
-{
-{text = 'مالك', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/AbsConstructor"},
-},
-{
-{text = 'مميز', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/vip"},{text = 'مميز عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/VipAll"},
-},
-{
-{text = 'ادمن عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/AdminAll"},{text = 'مدير عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/ManagerAll"},
-},
+{{text = '•ᴍʏ ᴅᴇᴠ♪', callback_data="/units"},{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', callback_data="/theytry"}},   
+{{text = '♪مــطــور الــبــوت•', url="http://t.me/"..sudos.UserName}},
+{{text = '♪ اضغط لاضافه البوت لمجمعتك •' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}}, 
 }
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
-if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
-else
-getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_ght)
-end 
-end
-if text and (text:match('^اضف رتبه @(.*)') or text:match('^رفع رتبه @(.*)')) and ChCheck(msg) then
-local username = text:match('^اضف رتبه @(.*)') or text:match('^رفع رتبه @(.*)')
-function drrreply(extra,result,success)
-if result.id_ then
-local Text = "اضغط علي الرتبه التي تريد رفع بها"
+if SourceCh(msg) and text == '/theytry' then
+local Teext =[[
+W𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒔𝒖𝒓𝒔𝒆 𝒔𝒊𝒓𝒊𝒂 ⧫ 𝙼⇣
+]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'مطور ثانوي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/SecondSudo"},{text = 'مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Sudo"},
-},
-{
-{text = 'منشئ اساسي', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/BasicConstructor"},{text = 'منشئ', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Constructor"},
-},
-{
-{text = 'مدير', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Manager"},{text = 'ادمن', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/Admin"},
-},
-{
-{text = 'مالك', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/AbsConstructor"},
-},
-{
-{text = 'مميز', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/vip"},{text = 'مميز عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/VipAll"},
-},
-{
-{text = 'ادمن عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/AdminAll"},{text = 'مدير عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.id_.."/ManagerAll"},
-},
+{{text = '𝙨𝙪𝙧𝙘𝙚 𝙨𝙞𝙧𝙞𝙖  ⤶',url="t.me/X_G_33"},{text = '𝙨𝙪𝙧𝙘𝙚 𝙨𝙞𝙧𝙞𝙖  1⤶', url="t.me/X_G_33"}},
+{{text = '•ᴛᴀᴡᴏsʟ♪',url="t.me/mero_kol_heaty"}}, 
+{{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
 }
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
- end
-resolve_username(username,drrreply)
-end
-if text and (text:match('^اضف رتبه (%d+)') or text:match('^رفع رتبه (%d+)')) and ChCheck(msg) then
-local user = text:match('اضف رتبه (%d+)') or text:match('رفع رتبه (%d+)')
-local Text = "اضغط علي الرتبه التي تريد رفع بها"
+if SourceCh(msg) and text == '/units' then
+local Teext =[[
+W𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒔𝒖𝒓𝒔𝒆 𝒔𝒊𝒓𝒊𝒂 ⧫ 𝙼⇣
+]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{
-{text = 'مطور ثانوي', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/SecondSudo"},{text = 'مطور', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/Sudo"},
-},
-{
-{text = 'منشئ اساسي', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/BasicConstructor"},{text = 'منشئ', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/Constructor"},
-},
-{
-{text = 'مدير', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/Manager"},{text = 'ادمن', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/Admin"},
-},
-{
-{text = 'مالك', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/AbsConstructor"},
-},
-{
-{text = 'مميز', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/vip"},{text = 'مميز عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/VipAll"},
-},
-{
-{text = 'ادمن عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/AdminAll"},{text = 'مدير عام', callback_data='amr@'..msg.sender_user_id_..'/user@'..user.."/ManagerAll"},
-},
+{{text = '•𝑠𝑖𝑟𝑖𝑎 ♪',url="t.me/AHMED_MERO_love"},{text = '•ᴀʜᴍᴀᴅ♪', url="t.me/YYYBD"}},
+{{text = '•𝙺𝚂𝙰𝙷𝙰 ♪',url="t.me/MR_AAS"},{text = '•♡♪', url="t.me/AAa_HHh_MM_EE_DD"}},
+{{text = '●𝙱𝙰𝙲𝙺↵', callback_data="/HHH"}},
 }
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
-
 --     Set RioSudo     --
 if Sudo(msg) then
 if text ==('اضف مطور اساسي') or text ==('رفع مطور اساسي') and ChCheck(msg) then
