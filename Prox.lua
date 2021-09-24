@@ -4651,7 +4651,7 @@ ReplyStatus(msg,msg.sender_user_id_,"WrongWay","⌔  ممنوع التكلم ب�
 end end
 --     Source Prox     --
 if SecondSudo(msg) then
-if text == 'جلب نسخه النسخه' and ChCheck(msg) or text == 'جلب نسخه احتياطيه' and ChCheck(msg) or text == 'جلب النسخه الاحتياطيه' and ChCheck(msg) or text == '↫ جلب نسخه احتياطيه ⌔' and ChCheck(msg) then
+if text == 'جلب النسخه' and ChCheck(msg) or text == 'جلب نسخه احتياطيه' and ChCheck(msg) or text == 'جلب النسخه الاحتياطيه' and ChCheck(msg) or text == '↫ جلب نسخه احتياطيه ⌔' and ChCheck(msg) then
 local List = DevRio:smembers(Prox..'Rio:Groups') 
 local BotName = (DevRio:get(Prox.."Rio:NameBot") or 'كيلوا')
 local GetJson = '{"BotId": '..Prox..',"BotName": "'..BotName..'","GroupsList":{'  
@@ -9589,7 +9589,7 @@ t = t..']}'
 local File = io.open('./'..Prox..'.json', "w")
 File:write(t)
 File:close()
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..Lions..'.json', '●عدد مشتركين البوت البوت : '..#list..'',dl_cb, nil)
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..Prox..'.json', '●عدد مشتركين البوت البوت : '..#list..'',dl_cb, nil)
 end
 
 if text == 'رفع المشتركين' then
@@ -13268,7 +13268,7 @@ Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' ⌔ بوت الهمسه ',url="t.me/nnna6bot"}},
+{{text = ' ⌔ بوت الهمسه ',url="t.me/YYYRETBOT"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/F_2_L_4/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
